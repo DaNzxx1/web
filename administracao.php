@@ -28,7 +28,7 @@
 			</div>
 			<div id="conteudo_especifico">
 				<div class="div_central centralizar menu_local">
-					<h1> ADMINISTRAÇÃO </h1>
+					<h1> A </h1>
 					<?php include "menu_local.php"; ?>
 				</div>
 			</div>
