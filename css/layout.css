@@ -1,0 +1,96 @@
+#principal {
+	font-family: arial;
+}
+
+/* div TOPO */
+#topo {	
+	padding: 5px;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin: 0px auto 20px auto;	
+	grid-gap: 5px;
+	border-radius: 10px;
+	border: 2px solid black;
+	background-color: MediumBlue;
+	color: white;	
+	justify-content: space-between;
+}
+
+#logo h1 {
+	line-height: 20px;
+	word-spacing: 0px; 
+	text-shadow: 0px 0px 8px black;
+}
+
+#logo h4{
+	line-height: 0px;
+	word-spacing: 10px;
+	text-align: center;
+	color: white;
+	text-shadow: 3px 3px 8px black;
+}
+
+
+/* div CONTEUDO_ESPECIFICO  */
+#conteudo_especifico {	
+	padding: 5px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin: 0px auto 5px auto;	
+	grid-gap: 20px;
+}
+
+.div_esquerda {
+	margin: 0px auto auto 150px;
+}
+
+.div_direita {
+	margin: 15px 150px auto auto;
+}
+
+.div_central {
+	margin: auto 150px auto 150px;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+/* div RODAPE */
+#rodape {	
+	padding: 2px;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: 50px;
+	margin: 20px auto 0px auto;
+	grid-gap: 5px;
+	border-radius: 10px;
+	border: 2px solid black;
+	background-color: MediumBlue;
+	color: white;	
+	justify-content: space-between;
+}
+
+#rodape h6{
+	line-height: 0px;
+	word-spacing: 0px; 
+	margin: 12px auto 12px 12px;
+}
+
+
+.centralizar {
+	text-align: center;
+	padding: 20px 30px 20px 30px;
+}
+
+.direita {
+	text-align: right;
+}
+
+.esquerda {
+	text-align: left;
+}
+
+
+.borda {
+	border: solid black 2px;
+	border-radius: 10px;
+}
