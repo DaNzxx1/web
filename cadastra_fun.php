@@ -10,6 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     </head>
     <body>
@@ -34,141 +35,99 @@
 					<?php include "menu_local.php"; ?>
 				</div>		
 				<div id="funcionalidade" class="div_direita">
-					<form method="post" action="processa_cadastra_fun.php">
-						<table class="centralizar">	
-							<tr>
-								<td>
-									<p> Nome: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="nome" required> </p>
-								</td>
-								<td>
-									<p> E-mail: </p>
-								</td>
-								<td>
-									<p> <input type="email" name="email" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Data de Nascimento: </p>
-								</td>
-								<td>
-									<p> <input type="date" name="data_nascimento" required> </p>
-								</td>
-								<td>
-									<p> Celular: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="celular" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> CPF: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="cpf" required> </p>
-								</td>
-								<td>
-									<p> RG: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="rg" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Login:  </p>
-								</td>
-								<td>
-									<p> <input type="text" name="login" required>  </p>
-								</td>
-								<td>
-									<p> Senha:  </p>
-								</td>
-								<td>
-									<p> <input type="password" name="senha" required>  </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Função:  </p>
-								</td>
-								<td>
-									<p> <input type="radio" name="funcao" value="estoquista" checked> Estoquista </p>
-									<p> <input type="radio" name="funcao" value="vendedor"> Vendedor </p>
-								</td>
-								<td>
-									<p> Carteira de Trabalho:  </p>
-								</td>
-								<td>
-									<p> <input type="text" name="carteira_de_trabalho" required>  </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> CEP: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="cep" required> </p>
-								</td>
-								<td>
-									<p> UF: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="uf" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Quadra: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="quadra" required> </p>
-								</td>
-								<td>
-									<p> Conjunto/Blocos: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="conjunto_blocos" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Número: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="numero" required> </p>
-								</td>
-								<td>
-									<p> Bairro: </p>
-								</td>
-								<td>
-									<p> <input type="text" name="bairro" required> </p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p> Data de Admissão: </p>
-								</td>
-								<td>
-									<p> <input type="date" name="data_admissao" required> </p>
-								</td>
-								<td>
-									<p> Data de Demissão: </p>
-								</td>
-								<td>
-									<p> <input type="date" name="data_demissao" readonly> </p>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="2">
-									<p> <input type="submit" value="Cadastrar Funcionário">  </p>
-								</td>
-							</tr>
-						</table>
+					<form method="post" class="form" action="processa_cadastra_fun.php">
+						<fieldset class="grupo">
+							<legend>Dados Pessoais</legend>
+
+							<div class="campo">
+								<label>Nome</label>
+								<input type="text" name="nome" id="nome" required>
+							</div>
+							<div class="campo">
+								<label>Celular</label>
+								<input type="text" name="celular" id="celular">
+							</div>
+							<div class="campo">
+								<label>Data de Nascimento</label>
+								<input type="date" name="data_nascimento" id="data_nascimento">
+							</div>
+							<div class="campo">
+								<label>E-mail</label>
+								<input type="email" name="email" id="email">
+							</div>
+							<div class="campo">
+								<label>CPF</label>
+								<input type="text" name="cpf" id="cpf">
+							</div>
+							<div class="campo">
+								<label>RG</label>
+								<input type="text" name="rg" id="rg">
+							</div>
+						</fieldset>
+
+						<fieldset class="grupo">
+							<legend>Dados de Endereço</legend>
+
+							<div class="campo">
+								<label>CEP</label>
+								<input type="text" name="cep" id="cep">
+							</div>
+							<div class="campo">
+								<label>Quadra</label>
+								<input type="text" name="quadra" id="quadra">
+							</div>
+							<div class="campo">
+								<label>Conjunto/Blocos</label>
+								<input type="text" name="conjunto_bloco" id="conjunto_bloco">
+							</div>
+							<div class="campo">
+								<label>Número</label>
+								<input type="text" name="numero" id="numero">
+							</div>
+							<div class="campo">
+								<label>Bairro</label>
+								<input type="text" name="bairro" id="bairro">
+							</div>	
+							<div class="campo">
+								<label>UF</label>
+								<input type="text" name="uf" id="uf">
+							</div>
+						</fieldset>
+
+						<fieldset class="grupo">
+							<legend>Dados Empresariais</legend>
+							
+							<div class="campo">
+								<label>Login</label>
+								<input type="text" name="login" id="login">
+							</div>
+							<div class="campo">
+								<label>Senha</label>
+								<input type="password" name="senha" id="senha">
+							</div>
+							<div class="campo">
+								<label>Função</label>
+								<select name="funcao" id="funcao">
+									<option selected disabled value="">Escolha</option>
+									<option value="funcao">Estoquista</option>
+									<option value="funcao">Vendedor</option>
+								</select>
+							</div>
+							<div class="campo">
+								<label>Data de Admissão</label>
+								<input type="date" name="data_admissao" id="data_admissao">
+							</div>
+							<div class="campo">
+								<label>Data de Demissão</label>
+								<input type="text" name="data_demissao" id="data_demissao" readonly>
+							</div>
+							<div class="campo">
+								<label>Carteira de Trabalho</label>
+								<input type="text" name="carteira_trabalho" id="carteira_trabalho">
+							</div>
+						</fieldset>
+						
+						<p> <input type="submit" class="botao" value="Cadastrar Funcionário">  </p>
 					</form>
 				</div>				
 			</div>	

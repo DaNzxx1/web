@@ -1,0 +1,63 @@
+.form {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    border: 1px solid black;
+    padding: 6px 60px 6px 60px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+input, select {
+    border-radius: 5px;
+}
+
+.campo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    text-shadow: 0px 0px 0.1px black;
+}
+
+fieldset.grupo .campo {
+    float: left;
+    margin-right: 10px;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo input[type="date"], .campo input[type="password"], .campo select {
+    padding: 0.2em;
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    display: block;
+    padding: 6px;
+}
+
+.campo input:focus, .campo select:focus {
+    background-color: whitesmoke;
+}
+
+.botao {
+    font-size: 1.1em;
+    background-color: whitesmoke;
+    color: black;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 0px 0px 0.5px black;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: whitesmoke;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
