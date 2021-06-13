@@ -28,7 +28,7 @@
 			</div>
 			<div id="conteudo_especifico">
 				<div class="div_central centralizar">
-					<h1> RECIBO </h1>
+					<h1> RELATÓRIO TOTAL DE VENDAS </h1>
 					<?php
 						$conectar = mysqli_connect ("localhost", "root", "", "celular");			
 						
