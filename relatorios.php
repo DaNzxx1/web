@@ -32,7 +32,7 @@
 						<li><a href="administracao.php" class="active">Administração</a></li>
 						<li><a href="rel_funci.php" class="active">Relatório de Funcionários</a></li>
 						<li><a href="rel_cel.php">Relatório de celulares em estoque</a></li>
-						<li><a href="rel_total_vendas.php" class="active">Relatório de vendas</a></li>		
+						<li><a href="rel_vendas.php" class="active">Relatório de vendas</a></li>		
 						<link rel="stylesheet" type="text/css" href="saudacoes.php">		
 					</ul> 
 				</div>
