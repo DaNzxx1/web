@@ -45,23 +45,23 @@
 							</div>
 							<div class="campo">
 								<label>Celular</label>
-								<input type="text" name="celular" id="celular">
+								<input type="text" name="celular" id="celular" required>
 							</div>
 							<div class="campo">
 								<label>Data de Nascimento</label>
-								<input type="date" name="data_nascimento" id="data_nascimento">
+								<input type="date" name="data_nascimento" id="data_nascimento" required>
 							</div>
 							<div class="campo">
 								<label>E-mail</label>
-								<input type="email" name="email" id="email">
+								<input type="email" name="email" id="email" required>
 							</div>
 							<div class="campo">
 								<label>CPF</label>
-								<input type="text" name="cpf" id="cpf">
+								<input type="text" name="cpf" id="cpf" required>
 							</div>
 							<div class="campo">
 								<label>RG</label>
-								<input type="text" name="rg" id="rg">
+								<input type="text" name="rg" id="rg" required>
 							</div>
 						</fieldset>
 
@@ -70,7 +70,7 @@
 
 							<div class="campo">
 								<label>CEP</label>
-								<input type="text" name="cep" id="cep">
+								<input type="text" name="cep" id="cep" required>
 							</div>
 							<div class="campo">
 								<label>Quadra</label>
@@ -86,11 +86,11 @@
 							</div>
 							<div class="campo">
 								<label>Bairro</label>
-								<input type="text" name="bairro" id="bairro">
+								<input type="text" name="bairro" id="bairro" required>
 							</div>	
 							<div class="campo">
 								<label>UF</label>
-								<input type="text" name="uf" id="uf">
+								<input type="text" name="uf" id="uf" required>
 							</div>
 						</fieldset>
 
@@ -99,31 +99,31 @@
 							
 							<div class="campo">
 								<label>Login</label>
-								<input type="text" name="login" id="login">
+								<input type="text" name="login" id="login" required>
 							</div>
 							<div class="campo">
 								<label>Senha</label>
-								<input type="password" name="senha" id="senha">
+								<input type="password" name="senha" id="senha" required>
 							</div>
 							<div class="campo">
 								<label>Função</label>
-								<select name="funcao" id="funcao">
+								<select name="funcao" id="funcao" required>
 									<option selected disabled value="">Escolha</option>
-									<option value="funcao">Estoquista</option>
-									<option value="funcao">Vendedor</option>
+									<option value="estoquista">Estoquista</option>
+									<option value="vendedor">Vendedor</option>
 								</select>
 							</div>
 							<div class="campo">
 								<label>Data de Admissão</label>
-								<input type="date" name="data_admissao" id="data_admissao">
+								<input type="date" name="data_admissao" id="data_admissao" required>
 							</div>
 							<div class="campo">
 								<label>Data de Demissão</label>
-								<input type="text" name="data_demissao" id="data_demissao" readonly>
+								<input type="date" name="data_demissao" id="data_demissao" readonly>
 							</div>
 							<div class="campo">
 								<label>Carteira de Trabalho</label>
-								<input type="text" name="carteira_trabalho" id="carteira_trabalho">
+								<input type="text" name="carteira_trabalho" id="carteira_trabalho" required>
 							</div>
 						</fieldset>
 						
@@ -134,10 +134,11 @@
 			<div id="rodape">
 				<div id="texto_institucional">
 					<div id="texto_institucional">
-						<h6> AMPLI - CONTROL </h6> 
-						<h6> Rua do Rock, 666 -- E-mail: contato@ampli_control.com.br -- Fone: (61) 9966 - 6677 </h6> 
+						<h6> MAX - CONTROL </h6> 
+						<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6> 
 					</div> 
 				</div>
+			</div>
 		</div>
     </body>
 </html>
