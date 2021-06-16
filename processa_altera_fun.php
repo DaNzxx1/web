@@ -1,6 +1,6 @@
 <?php 
 
-$conectar = mysqli_connect("localhost", "root", "", "celular");
+$conectar = mysqli_connect("localhost", "root", "", "themax");
 
 $cod = $_POST['codigo'];
 $funcao = $_POST['funcao'];

@@ -2,7 +2,7 @@
 
     session_start();
 
-    $conectar = mysqli_connect("localhost", "root", "", "celular");
+    $conectar = mysqli_connect("localhost", "root", "", "themax");
 
     $login = $_POST["login"];
     $senha = $_POST["senha"];
