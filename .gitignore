@@ -1,7 +1,7 @@
 # File created using '.gitignore Generator' for Visual Studio Code: https://bit.ly/vscode-gig
 
-# Created by https://www.toptal.com/developers/gitignore/api/windows,microsoftoffice,macos,linux,backup
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,microsoftoffice,macos,linux,backup
+# Created by https://www.toptal.com/developers/gitignore/api/windows,microsoftoffice,macos,linux,backup,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,microsoftoffice,macos,linux,backup,visualstudiocode
 
 ### Backup ###
 *.bak
@@ -32,7 +32,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -73,6 +74,19 @@ Backup of *.doc*
 # Visio autosave temporary files
 *.~vsd*
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -99,8 +113,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,microsoftoffice,macos,linux,backup
+# End of https://www.toptal.com/developers/gitignore/api/windows,microsoftoffice,macos,linux,backup,visualstudiocode
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
-.vscode

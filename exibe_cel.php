@@ -35,7 +35,7 @@
 				</div>		
 				<div id="funcionalidade" class="div_direita">					
 					<?php
-						$conectar = mysqli_connect("localhost", "root", "", "celular"); 
+						$conectar = mysqli_connect("localhost", "root", "", "themax"); 
 						$cod = $_GET['codigo'];
 
 						$sql_consulta = "SELECT marca_cel, nome_cel, processador_cel, memoria_cel, 

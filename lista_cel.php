@@ -35,7 +35,7 @@
 				</div>		
 				<div id="funcionalidade" class="div_direita">					
 					<?php
-						$conectar = mysqli_connect("localhost", "root", "", "celular"); 
+						$conectar = mysqli_connect("localhost", "root", "", "themax"); 
 
 						$sql_consulta = "SELECT id_cel, marca_cel, nome_cel, memoria_cel, preco_cel FROM celular";
 						$resultado_consulta = mysqli_query($conectar, $sql_consulta);
