@@ -44,8 +44,8 @@
 								<input type="text" name="nome" id="nome" required>
 							</div>
 							<div class="campo">
-								<label>Celular</label>
-								<input type="text" name="celular" id="celular" required>
+								<label>Telefone</label>
+								<input type="text" name="telefone" id="telefone" required>
 							</div>
 							<div class="campo">
 								<label>Data de Nascimento</label>
@@ -73,12 +73,8 @@
 								<input type="text" name="cep" id="cep" required>
 							</div>
 							<div class="campo">
-								<label>Quadra</label>
-								<input type="text" name="quadra" id="quadra">
-							</div>
-							<div class="campo">
-								<label>Conjunto/Blocos</label>
-								<input type="text" name="conjunto_bloco" id="conjunto_bloco">
+								<label>Endereço</label>
+								<input type="text" name="endereco" id="endereco">
 							</div>
 							<div class="campo">
 								<label>Número</label>

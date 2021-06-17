@@ -151,7 +151,7 @@ a {
 /* Lista Func */
 
 .listaFun {
-    font-size: 18px;
+    font-size: 17px;
     padding: 5px;
     text-shadow: 0px 0px 1px black;
 }
@@ -174,4 +174,62 @@ a {
     padding: 8px 10px 8px 10px;
     border-radius: 10px;
     background: red;
+}
+
+.exibe {
+    border: 0px solid black;
+    padding: 7px 2px 7px 7px;
+    border-radius: 30px;
+    background: gray;
+}
+
+/* Login */
+
+/* .box {
+    background-color: black;
+    border: 1px solid blue;
+    border-radius: 10px;
+} */
+
+.box h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    text-shadow: 1px 1px 3px PowderBlue;
+}
+
+.box input[type="text"], input[type="password"] {
+    border: 3px solid slateblue;
+    border-radius: 20px;
+    padding: 8px 0px 8px 0px;
+    width: 220px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    transition: 0.25s;
+    background: GhostWhite;
+}
+
+.box input[type="text"]:focus, input[type="password"]:focus {
+    width: 300px;
+    border: 3px solid #2ecc71;
+}
+
+.box input[type="submit"] {
+    border: 3px solid #2ecc71;
+    border-radius: 20px;
+    padding: 8px 0px 8px 0px;
+    width: 150px;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover {
+    background: #2ecc71;
+    border: 3px solid #00ff6a;
 }

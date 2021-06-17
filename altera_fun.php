@@ -56,8 +56,8 @@
 									<input type="text" name="nome" id="nome" value="<?php echo $registro[1] ?>" required>
 								</div>
 								<div class="campo">
-									<label>Celular</label>
-									<input type="text" name="celular" id="celular" value="<?php echo $registro[6] ?>">
+									<label>Telefone</label>
+									<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>">
 								</div>
 								<div class="campo">
 									<label>Data de Nascimento</label>
@@ -82,27 +82,23 @@
 
 								<div class="campo">
 									<label>CEP</label>
-									<input type="text" name="cep" id="cep" value="<?php echo $registro[11] ?>">
+									<input type="text" name="cep" id="cep" value="<?php echo $registro[15] ?>">
 								</div>
 								<div class="campo">
-									<label>Quadra</label>
-									<input type="text" name="quadra" id="quadra" value="<?php echo $registro[13] ?>">
-								</div>
-								<div class="campo">
-									<label>Conjunto/Blocos</label>
-									<input type="text" name="conjunto_bloco" id="conjunto_bloco" value="<?php echo $registro[14] ?>">
+									<label>Endereço</label>
+									<input type="text" name="endereco" id="endereco" value="<?php echo $registro[17] ?>">
 								</div>
 								<div class="campo">
 									<label>Número</label>
-									<input type="text" name="numero" id="numero" value="<?php echo $registro[15] ?>">
+									<input type="text" name="numero" id="numero" value="<?php echo $registro[18] ?>">
 								</div>
 								<div class="campo">
 									<label>Bairro</label>
-									<input type="text" name="bairro" id="bairro" value="<?php echo $registro[12] ?>">
+									<input type="text" name="bairro" id="bairro" value="<?php echo $registro[16] ?>">
 								</div>	
 								<div class="campo">
 									<label>UF</label>
-									<input type="text" name="uf" id="uf" value="<?php echo $registro[16] ?>">
+									<input type="text" name="uf" id="uf" value="<?php echo $registro[14] ?>">
 								</div>
 							</fieldset>
 
@@ -133,15 +129,15 @@
 								</div>
 								<div class="campo">
 									<label>Data de Admissão</label>
-									<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[18] ?>">
+									<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[12] ?>">
 								</div>
 								<div class="campo">
 									<label>Data de Demissão</label>
-									<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[19] ?>">
+									<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>">
 								</div>
 								<div class="campo">
 									<label>Carteira de Trabalho</label>
-									<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[17] ?>">
+									<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[11] ?>">
 								</div>
 							</fieldset>
 							
@@ -158,8 +154,8 @@
 									<input type="text" name="nome" id="nome" value="<?php echo $registro[1] ?>" readonly>
 								</div>
 								<div class="campo">
-									<label>Celular</label>
-									<input type="text" name="celular" id="celular" value="<?php echo $registro[6] ?>" readonly>
+									<label>Telefone</label>
+									<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>">
 								</div>
 								<div class="campo">
 									<label>Data de Nascimento</label>
@@ -184,27 +180,23 @@
 
 								<div class="campo">
 									<label>CEP</label>
-									<input type="text" name="cep" id="cep" value="<?php echo $registro[11] ?>" readonly>
+									<input type="text" name="cep" id="cep" value="<?php echo $registro[15] ?>" readonly>
 								</div>
 								<div class="campo">
-									<label>Quadra</label>
-									<input type="text" name="quadra" id="quadra" value="<?php echo $registro[13] ?>" readonly>
-								</div>
-								<div class="campo">
-									<label>Conjunto/Blocos</label>
-									<input type="text" name="conjunto_bloco" id="conjunto_bloco" value="<?php echo $registro[14] ?>" readonly>
+									<label>Endereço</label>
+									<input type="text" name="endereco" id="endereco" value="<?php echo $registro[17] ?>" readonly>
 								</div>
 								<div class="campo">
 									<label>Número</label>
-									<input type="text" name="numero" id="numero" value="<?php echo $registro[15] ?>" readonly>
+									<input type="text" name="numero" id="numero" value="<?php echo $registro[18] ?>" readonly>
 								</div>
 								<div class="campo">
 									<label>Bairro</label>
-									<input type="text" name="bairro" id="bairro" value="<?php echo $registro[12] ?>" readonly>
+									<input type="text" name="bairro" id="bairro" value="<?php echo $registro[16] ?>" readonly>
 								</div>	
 								<div class="campo">
 									<label>UF</label>
-									<input type="text" name="uf" id="uf" value="<?php echo $registro[16] ?>" readonly>
+									<input type="text" name="uf" id="uf" value="<?php echo $registro[14] ?>" readonly>
 								</div>
 							</fieldset>
 
@@ -231,15 +223,15 @@
 								</div>
 								<div class="campo">
 									<label>Data de Admissão</label>
-									<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[18] ?>" readonly>
+									<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[12] ?>" readonly>
 								</div>
 								<div class="campo">
 									<label>Data de Demissão</label>
-									<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[19] ?>" readonly>
+									<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>" readonly>
 								</div>
 								<div class="campo">
 									<label>Carteira de Trabalho</label>
-									<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[17] ?>" readonly>
+									<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[11] ?>" readonly>
 								</div>
 							</fieldset>
 							

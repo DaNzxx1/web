@@ -65,9 +65,10 @@
 							<tr>
 								<td class="esquerda">
 									<p>
-										<a href="exibe_fun.php?codigo=<?php echo $registro[0] ?>">
-											<?php echo "$registro[1]"; ?>
-										</a>
+										<a class="exibe" href="exibe_fun.php?codigo=<?php echo $registro[0] ?>">
+											<i class="fas fa-stream" style="color: white;"></i>
+										</a>&nbsp;
+										<?php echo "$registro[1]"; ?>
 									</p>
 								</td>
 								<td>

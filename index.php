@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/layout.css">
 		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     </head>
     <body>
@@ -22,19 +23,20 @@
 			</div>
 			<div id="conteudo_especifico">
 				<div class="div_central centralizar">
-					<h1> ACESSO À ÁREA RESTRITA </h1>
+					<h1 style="text-shadow: 1px 1px 3px steelblue;"> ACESSO À ÁREA RESTRITA </h1>
 					<form method="post" action="processa_login.php">
-						<p>
-							Login: <br>
-							<input type="text" name="login" required>
-						</p>
-						<p>
-							Senha: <br>
-							<input type="password" name="senha" required>
-						</p>
-						<p>
-							<input type="submit" value="Entrar">
-						</p>
+						<div class="box">
+							<h2>Login</h2>
+							<p>
+								<input type="text" name="login" placeholder="Login" required>
+							</p>
+							<p>
+								<input type="password" name="senha" placeholder="Senha" required>
+							</p>
+							<p>
+								<input type="submit" value="Entrar">
+							</p>
+						</div>
 					</form>										
 				</div>				
 			</div>
