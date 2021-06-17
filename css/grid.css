@@ -15,7 +15,7 @@
     grid-area: footer;
 }
 
-#principal {
+.principal {
     display: grid;
     grid-template-areas:
         'header header header header header header'
@@ -25,16 +25,16 @@
     padding: 10px;
 }
 
-#principal>div {
+.principal>div {
     padding: 20px 0;
 }
 
 /* GRID DO TOPO */
-#logo {
+.logo {
     grid-area: logo;
 }
 
-#menu_global {
+.menu_global {
     grid-area: menu_global;
 }
 

@@ -48,6 +48,8 @@ fieldset.grupo .campo {
 }
 
 .botao {
+    border: 1px solid black;
+    border-radius: 10px;
     font-size: 1.1em;
     background-color: whitesmoke;
     color: black;
@@ -59,7 +61,6 @@ fieldset.grupo .campo {
 }
 
 .botao:hover {
-    background-color: whitesmoke;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 

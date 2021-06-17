@@ -19,32 +19,36 @@ session_start();
 </head>
 
 <body>
-	<div id="principal">
-		<div id="topo" class="topo topo_grid">
-			<div id="logo">
+	<div class="principal">
+		<div class="topo topo_grid">
+			<div class="logo">
 				<h1> THE MAX Celulares </h1>
 				<h4> Controle de estoque e venda </h4>
 			</div>
-			<div id="menu_global" class="menu_global">
+			<div class="menu_global">
 				<ul>
 					<li> Olá <?php include "valida_login.php"; ?> </li>
 					<li><a href="logout.php" class="active">Sair</a></li>
 				</ul>
 			</div>
 		</div>
-		<div id="menu_local" class="menu_local">
+		<div class="menu_local">
 			<?php include "menu_local.php"; ?>
 		</div>
-		<div id="conteudo_especifico" class="conteudo_especifico centralizar">
+		<div class="conteudo_especifico centralizar">
 			<h1> FUNCIONÁRIOS </h1>
 			<div id="funcionalidade">
 				<?php
-				$conectar = mysqli_connect("localhost", "root", "", "themax");
+					$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-				$sql_consulta = "SELECT id_fun, nome_fun, funcao_fun, status_fun FROM funcionarios";
-				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
+					$sql_consulta = "SELECT id_fun, nome_fun, funcao_fun, status_fun FROM funcionarios";
+					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
-				<p align="right"> <a class="botao" href="cadastra_fun.php" style="border: 1px solid black; border-radius: 10px;" title="Cadastrar Funcionário"> Cadastrar Funcionário&nbsp;<i class="fas fa-user-plus"></i> </a> </p>
+				<div>
+					<a class="botao" href="cadastra_fun.php">
+						Cadastrar Funcionário <i class="fas fa-user-plus"></i>
+					</a>
+				</div>
 				<table class="centralizar listaFun">
 					<tr>
 						<td class="esquerda" style="border-bottom: 1px solid black!important;">
@@ -107,7 +111,7 @@ session_start();
 				</table>
 			</div>
 		</div>
-		<div id="rodape" class="rodape">
+		<div class="rodape">
 			<div id="texto_institucional">
 				<div id="texto_institucional">
 					<h6> MAX - CONTROL </h6>

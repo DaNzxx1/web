@@ -1,9 +1,9 @@
-#principal {
+.principal {
 	font-family: arial;
 }
 
 /* div TOPO */
-#topo {
+.topo {
 	margin: 0px auto 20px auto;
 	border-radius: 10px;
 	border: 2px solid black;
@@ -12,29 +12,29 @@
 	width: 100%;
 }
 
-#logo {
+.logo {
 	padding-left: 2em;
 }
 
-#logo h1 {
+.logo h1 {
 	line-height: 20px;
 	text-shadow: 0px 0px 8px black;
 }
 
-#logo h4 {
+.logo h4 {
 	line-height: 0px;
 	word-spacing: 10px;
 	color: white;
 	text-shadow: 3px 3px 8px black;
 }
 
-#menu_global {
+.menu_global {
 	text-align: end;
 }
 
 
 /* div CONTEUDO_ESPECIFICO  */
-#conteudo_especifico {
+.conteudo_especifico {
 	padding: 5px;
 	grid-template-columns: 50% 50%;
 	margin: 0px auto 5px auto;
@@ -56,7 +56,7 @@
 }
 
 /* div RODAPE */
-#rodape {
+.rodape {
 	margin: 20px auto 0px auto;
 	border-radius: 10px;
 	border: 2px solid black;
@@ -65,7 +65,7 @@
 	width: 100%;
 }
 
-#rodape h6 {
+.rodape h6 {
 	line-height: 0px;
 	word-spacing: 0px;
 	margin: 12px auto 12px 12px;
