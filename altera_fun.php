@@ -30,12 +30,10 @@ session_start();
 			</div>
 		</div>
 		<div class="conteudo_especifico">
-			<div class="div_central centralizar">
+			<div class="centralizar">
 				<h1> ALTERAÇÃO DE USUÁRIOS </h1>
 			</div>
-			<div class="div_esquerda menu_local">
-				<?php include "menu_local.php"; ?>
-			</div>
+
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
