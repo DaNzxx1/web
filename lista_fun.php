@@ -37,6 +37,11 @@ session_start();
 		</div>
 		<div class="conteudo_especifico centralizar">
 			<h1> FUNCIONÁRIOS </h1>
+				<div>
+					<a class="div_esquerda botao" href="cadastra_fun.php">
+						Cadastrar Funcionário <i class="fas fa-user-plus"></i>
+					</a>
+				</div>
 			<div id="funcionalidade">
 				<?php
 					$conectar = mysqli_connect("localhost", "root", "", "themax");
@@ -44,13 +49,26 @@ session_start();
 					$sql_consulta = "SELECT id_fun, nome_fun, funcao_fun, status_fun FROM funcionarios";
 					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
-				<div>
-					<a class="botao" href="cadastra_fun.php">
-						Cadastrar Funcionário <i class="fas fa-user-plus"></i>
-					</a>
-				</div>
 				<table class="centralizar listaFun">
 					<tr>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
+						<td class="esquerda" style="border-bottom: 1px solid black!important;">
+							<p> Nome </p>
+						</td>
 						<td class="esquerda" style="border-bottom: 1px solid black!important;">
 							<p> Nome </p>
 						</td>
