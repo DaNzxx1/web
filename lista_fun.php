@@ -106,23 +106,21 @@ session_start();
 								<a class="botaonao" href="#fechar">Não</a>
 							</div>
 						</div>
-			</div>
-		<?php
+					<?php
 					}
-		?>
-		</table>
+					?>
+				</table>
+			</div>
 		</div>
-	</div>
-	<div class="rodape">
-		<div id="texto_institucional">
+		<div class="rodape">
 			<div id="texto_institucional">
-				<h6> MAX - CONTROL </h6>
-				<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
+				<div id="texto_institucional">
+					<h6> MAX - CONTROL </h6>
+					<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
+				</div>
 			</div>
 		</div>
 	</div>
-	</div>
-	<!-- <script src="css/model.js"></script> -->
 </body>
 
 </html>
