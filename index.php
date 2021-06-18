@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/layout.css">
 	<link rel="stylesheet" href="css/menu.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 
@@ -26,8 +27,11 @@
 				</ul>
 			</div>
 		</div>
+		<div class="menu_local">
+			<?php include "menu_local.php"; ?>
+		</div>
 		<div class="conteudo_especifico">
-			<div class="div_central centralizar">
+			<div class="centralizar">
 				<h1 style="text-shadow: 1px 1px 3px steelblue;"> ACESSO À ÁREA RESTRITA </h1>
 				<form method="post" action="processa_login.php">
 					<div class="box">

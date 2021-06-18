@@ -11,6 +11,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 
@@ -28,8 +29,11 @@ session_start();
 				</ul>
 			</div>
 		</div>
+		<div class="menu_local">
+			<?php include "menu_local.php"; ?>
+		</div>
 		<div class="conteudo_especifico">
-			<div class="div_central centralizar">
+			<div class="centralizar">
 				<h1> RELATÓRIO TOTAL DE VENDAS </h1>
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "celular");
@@ -51,8 +55,6 @@ session_start();
 				<p> Total de vendas até a data de hoje: <?php echo $valor_total; ?> </p>
 				<p> <a href="relatorios.php"> Voltar </a> </p>
 			</div>
-
-
 		</div>
 		<div class="rodape">
 			<div id="texto_institucional">

@@ -12,6 +12,7 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
 
@@ -30,12 +31,10 @@ session_start();
 			</div>
 		</div>
 		<div class="conteudo_especifico">
-			<div class="div_central centralizar">
+			<div class="centralizar">
 				<h1> ALTERAÇÃO DE USUÁRIOS </h1>
 			</div>
-			<div class="div_esquerda menu_local">
-				<?php include "menu_local.php"; ?>
-			</div>
+
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
