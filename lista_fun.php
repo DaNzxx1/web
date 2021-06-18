@@ -54,24 +54,6 @@ session_start();
 						<td class="esquerda" style="border-bottom: 1px solid black!important;">
 							<p> Nome </p>
 						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
-						<td class="esquerda" style="border-bottom: 1px solid black!important;">
-							<p> Nome </p>
-						</td>
 						<td style="border-bottom: 1px solid black!important;">
 							<p> Função </p>
 						</td>
