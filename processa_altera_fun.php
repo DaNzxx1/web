@@ -29,14 +29,13 @@ if ($funcao == "administrador") {
 } else {
 
     $nome = $_POST['nome'];
-    $celular = $_POST['celular'];
+    $telefone = $_POST['telefone'];
     $data_nascimento = $_POST['data_nascimento'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
     $rg = $_POST['rg'];
     $cep = $_POST['cep'];
-    $quadra = $_POST['quadra'];
-    $conjunto_blocos = $_POST['conjunto_bloco'];
+    $endereco = $_POST['endereco'];
     $numero = $_POST['numero'];
     $bairro = $_POST['bairro'];
     $uf = $_POST['uf'];
@@ -44,7 +43,7 @@ if ($funcao == "administrador") {
     $senha = $_POST['senha'];
     $funcao = $_POST['funcao'];
     $status = $_POST['status'];
-    $data_admissao = $_POST['data_admissao'];
+    $date_admissao = $_POST['data_admissao'];
     $data_demissao = $_POST['data_demissao'];
     $carteira_trabalho = $_POST['carteira_trabalho'];
 
@@ -63,9 +62,9 @@ if ($funcao == "administrador") {
 
     } else {
 
-        $sql_update = "UPDATE funcionarios SET nome_fun = '$nome', celular_fun = '$celular', data_nascimento_fun = '$data_nascimento', email_fun = '$email', cpf_fun = '$cpf' , rg_fun = '$rg',
-        cep_fun = '$cep', quadra_fun = '$quadra', conjunto_blocos_fun = '$conjunto_blocos', numero_fun = '$numero', bairro_fun = '$bairro', uf_fun = '$uf',
-        login_fun = '$login', senha_fun = '$senha', funcao_fun = '$funcao', status_fun = '$status', data_admissao_fun = '$data_admissao', data_demissao_fun = '$data_demissao', carteira_de_trabalho_fun = '$carteira_trabalho'
+        $sql_update = "UPDATE funcionarios SET nome_fun = '$nome', telefone_fun = '$telefone', data_nascimento_fun = '$data_nascimento', email_fun = '$email', cpf_fun = '$cpf' , rg_fun = '$rg',
+        cep_fun = '$cep', endereco_fun = '$endereco', END_NUMERO_FUN = '$numero', bairro_fun = '$bairro', uf_fun = '$uf',
+        login_fun = '$login', senha_fun = '$senha', funcao_fun = '$funcao', status_fun = '$status', date_admissao_fun = '$date_admissao', data_demissao_fun = '$data_demissao', carteira_de_trabalho_fun = '$carteira_trabalho'
             WHERE id_fun = '$cod'";
 
         $resultado_update = mysqli_query($conectar, $sql_update);

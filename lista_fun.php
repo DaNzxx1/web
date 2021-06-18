@@ -37,17 +37,17 @@ session_start();
 		</div>
 		<div class="conteudo_especifico centralizar">
 			<h1> FUNCIONÁRIOS </h1>
-				<div>
-					<a class="div_esquerda botao" href="cadastra_fun.php">
-						Cadastrar Funcionário <i class="fas fa-user-plus"></i>
-					</a>
-				</div>
+			<div>
+				<a class="div_esquerda botao" href="cadastra_fun.php">
+					Cadastrar Funcionário <i class="fas fa-user-plus"></i>
+				</a>
+			</div>
 			<div id="funcionalidade">
 				<?php
-					$conectar = mysqli_connect("localhost", "root", "", "themax");
+				$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-					$sql_consulta = "SELECT id_fun, nome_fun, funcao_fun, status_fun FROM funcionarios";
-					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
+				$sql_consulta = "SELECT id_fun, nome_fun, funcao_fun, status_fun FROM funcionarios";
+				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
 				<table class="centralizar listaFun">
 					<tr>
@@ -88,9 +88,10 @@ session_start();
 						<tr>
 							<td class="esquerda">
 								<p>
-									<a href="exibe_fun.php?codigo=<?php echo $registro[0] ?>">
-										<?php echo "$registro[1]"; ?>
-									</a>
+									<a class="exibe" href="exibe_fun.php?codigo=<?php echo $registro[0] ?>">
+										<i class="fas fa-stream" style="color: white;"></i>
+									</a>&nbsp;
+									<?php echo "$registro[1]"; ?>
 								</p>
 							</td>
 							<td>
@@ -123,20 +124,21 @@ session_start();
 								<a class="botaonao" href="#fechar">Não</a>
 							</div>
 						</div>
-					<?php
+			</div>
+		<?php
 					}
-					?>
-				</table>
-			</div>
+		?>
+		</table>
 		</div>
-		<div class="rodape">
+	</div>
+	<div class="rodape">
+		<div id="texto_institucional">
 			<div id="texto_institucional">
-				<div id="texto_institucional">
-					<h6> MAX - CONTROL </h6>
-					<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
-				</div>
+				<h6> MAX - CONTROL </h6>
+				<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- <script src="css/model.js"></script> -->
 </body>

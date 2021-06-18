@@ -51,7 +51,7 @@
 								<td> <?php echo $registro[1] ?> </td>
 							</tr>
 							<tr>
-								<td class="borda-direita"> <strong>Celular:</strong> </td> 
+								<td class="borda-direita"> <strong>Telefone:</strong> </td> 
 								<td> <?php echo $registro[6] ?> </td>
 							</tr>
 							<tr>
@@ -72,27 +72,23 @@
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>CEP:</strong> </td> 
-								<td> <?php echo $registro[11] ?> </td>
-							</tr>
-							<tr>
-								<td class="borda-direita"> <strong>Quadra:</strong> </td> 
-								<td> <?php echo $registro[13] ?> </td>
-							</tr>
-							<tr>
-								<td class="borda-direita"> <strong>Conjunto/Blocos:</strong> </td> 
-								<td> <?php echo $registro[14] ?> </td>
-							</tr>
-							<tr>
-								<td class="borda-direita"> <strong>Número:</strong> </td> 
 								<td> <?php echo $registro[15] ?> </td>
 							</tr>
 							<tr>
+								<td class="borda-direita"> <strong>Endereço:</strong> </td> 
+								<td> <?php echo $registro[17] ?> </td>
+							</tr>
+							<tr>
+								<td class="borda-direita"> <strong>Número:</strong> </td> 
+								<td> <?php echo $registro[18] ?> </td>
+							</tr>
+							<tr>
 								<td class="borda-direita"> <strong>Bairro:</strong> </td> 
-								<td> <?php echo $registro[12] ?> </td>
+								<td> <?php echo $registro[16] ?> </td>
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>UF:</strong> </td> 
-								<td> <?php echo $registro[16] ?> </td>
+								<td> <?php echo $registro[14] ?> </td>
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>Login:</strong> </td> 
@@ -108,15 +104,15 @@
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>Data de Admissão:</strong> </td> 
-								<td> <?php echo $registro[18] ?> </td>
+								<td> <?php echo $registro[12] ?> </td>
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>Data de Demissão:</strong> </td> 
-								<td> <?php echo $registro[19] ?> </td>
+								<td> <?php echo $registro[13] ?> </td>
 							</tr>
 							<tr>
 								<td class="borda-direita"> <strong>Carteira de Trabalho:</strong> </td> 
-								<td> <?php echo $registro[17] ?> </td>
+								<td> <?php echo $registro[11] ?> </td>
 							</tr>
 						</table>					
 				</div>				
