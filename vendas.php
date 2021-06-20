@@ -6,7 +6,7 @@ session_start();
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Funcionários</title>
+		<title>Vendas</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -35,10 +35,10 @@ session_start();
 				<?php include "menu_local.php"; ?>
 			</div>
 			<div class="conteudo_especifico centralizar">
-				<h1> FUNCIONÁRIOS </h1>
+				<h1> VENDAS </h1>
 				<div>
-					<a class="div_esquerda botao" href="cadastra_fun.php" title="Cadastrar Funcionário">
-						Cadastrar Funcionário <i class="fas fa-user-plus"></i>
+					<a class="div_esquerda botao" href="cadastra_fun.php" title="Cadastrar Venda">
+						Cadastrar Venda <i class="fas fa-user-plus"></i>
 					</a>
 				</div>
 				<div id="funcionalidade">
@@ -78,7 +78,7 @@ session_start();
 							<tr>
 								<td class="esquerda">
 									<p>
-										<a class="exibe" href="exibe_fun.php?codigo=<?php echo $registro[0] ?>" title="Exibir Funcionário">
+										<a class="exibe" href="exibe_fun.php?codigo=<?php echo $registro[0] ?>" title="Exibir Venda">
 											<i class="fas fa-stream" style="color: white;"></i>
 										</a>&nbsp;
 										<?php echo "$registro[1]"; ?>
@@ -111,10 +111,10 @@ session_start();
 								</td>
 								<td class="direita">
 									<p>
-										<a class="editar" href="altera_fun.php?codigo=<?php echo $registro[0] ?>" title="Editar Funcionário">
+										<a class="editar" href="altera_fun.php?codigo=<?php echo $registro[0] ?>" title="Editar Venda">
 											<i class="fas fa-user-edit" style="color: white;"></i>
 										</a>
-										<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Funcionário">
+										<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Venda">
 											<i class="fas fa-user-times" style="color: white;"></i>
 										</a>
 									</p>
@@ -123,8 +123,8 @@ session_start();
 							<div id="abrirModal<?php echo $registro[0] ?>" class="modal">
 								<div>
 									<a href="#fechar" title="Fechar" class="fechar">x</a>
-									<h2>Excluir funcionário</h2>
-									<p>Você realmente deseja excluir este funcionário?</p>
+									<h2>Excluir Venda</h2>
+									<p>Você realmente deseja excluir este Venda?</p>
 									<a class="botaosim" href="processa_excluir_fun.php?codigo=<?php echo $registro[0] ?>">Sim</a>
 									<a class="botaonao" href="#fechar">Não</a>
 								</div>

@@ -11,29 +11,27 @@
         <link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     </head>
     <body>
-        <div id="principal">
-			<div id="topo">
-				<div id="logo">
-					<h1> THE MAX Celulares </h1>
-					<h4> Controle de estoque e venda </h4>
-				</div>
-				<div class="menu_global">
-					<ul>
-                        <li> Olá <?php include "valida_login.php"; ?> </li>
-						<li><a href="logout.php" class="active">Sair</a></li>                        
-                    </ul>                
-				</div>
+        <div class="principal">
+<div class="topo topo_grid">
+			<div class="logo">
+				<h1> THE MAX Celulares </h1>
+				<h4> Controle de estoque e venda </h4>
 			</div>
-			<div id="conteudo_especifico">
-				<div class="div_central centralizar">
+			<div class="menu_global">
+				<ul>
+					<li> Olá <?php include "valida_login.php"; ?> </li>
+					<li><a href="logout.php" class="active">Sair</a></li>
+				</ul>
+			</div>
+		</div>
+			<div class="conteudo_especifico">
+				<div class="centralizar">
 					<h1> CADASTRO DE FUNCIONÁRIOS </h1>
-				</div>
-				<div class="div_esquerda menu_local">					
-					<?php include "menu_local.php"; ?>
-				</div>		
+				</div>	
 				<div id="funcionalidade" class="div_direita">
 					<form method="post" class="form" action="processa_cadastra_fun.php">
 						<fieldset class="grupo">
@@ -44,8 +42,8 @@
 								<input type="text" name="nome" id="nome" required>
 							</div>
 							<div class="campo">
-								<label>Celular</label>
-								<input type="text" name="celular" id="celular" required>
+								<label>Telefone</label>
+								<input type="text" name="telefone" id="telefone" required>
 							</div>
 							<div class="campo">
 								<label>Data de Nascimento</label>
@@ -73,12 +71,8 @@
 								<input type="text" name="cep" id="cep" required>
 							</div>
 							<div class="campo">
-								<label>Quadra</label>
-								<input type="text" name="quadra" id="quadra">
-							</div>
-							<div class="campo">
-								<label>Conjunto/Blocos</label>
-								<input type="text" name="conjunto_bloco" id="conjunto_bloco">
+								<label>Endereço</label>
+								<input type="text" name="endereco" id="endereco">
 							</div>
 							<div class="campo">
 								<label>Número</label>
@@ -131,7 +125,7 @@
 					</form>
 				</div>				
 			</div>	
-			<div id="rodape">
+			<div class="rodape">
 				<div id="texto_institucional">
 					<div id="texto_institucional">
 						<h6> MAX - CONTROL </h6> 
