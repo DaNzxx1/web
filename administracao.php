@@ -29,12 +29,10 @@ session_start();
 				</ul>
 			</div>
 		</div>
-		<div class="menu_local">
-			<?php include "menu_local.php"; ?>
-		</div>
 		<div class="conteudo_especifico">
-			<div class="centralizar">
+			<div class="div_central centralizar menu_local" style="margin-right: 380px;">
 				<h1> ADMINISTRAÇÃO </h1>
+				<?php include "menu_local.php"; ?>
 			</div>
 		</div>
 		<div class="rodape">

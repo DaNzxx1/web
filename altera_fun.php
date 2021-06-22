@@ -30,6 +30,9 @@ session_start();
 				</ul>
 			</div>
 		</div>
+		<div class="menu_local">
+			<?php include "menu_local.php"; ?>
+		</div>
 		<div class="conteudo_especifico">
 			<div class="centralizar">
 				<h1> ALTERAÇÃO DE USUÁRIOS </h1>

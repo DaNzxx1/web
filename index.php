@@ -20,17 +20,10 @@
 					<h4> Controle de estoque e venda </h4>
 				</div>
 				<div class="menu_global">
-					<ul>
-						<li> Olá <?php include "valida_login.php"; ?> </li>
-						<li><a href="logout.php" class="active">Sair</a></li>
-					</ul>
 				</div>
 			</div>
-			<div class="menu_local">
-				<?php include "menu_local.php"; ?>
-			</div>
 			<div class="conteudo_especifico">
-				<div class="centralizar">
+				<div class="centralizar" style="margin-right: 270px;">
 					<h1 style="text-shadow: 1px 1px 3px steelblue;"> ACESSO À ÁREA RESTRITA </h1>
 					<form method="post" action="processa_login.php">
 						<div class="box">

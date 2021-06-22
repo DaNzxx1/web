@@ -16,18 +16,21 @@
     </head>
     <body>
         <div class="principal">
-<div class="topo topo_grid">
-			<div class="logo">
-				<h1> THE MAX Celulares </h1>
-				<h4> Controle de estoque e venda </h4>
+			<div class="topo topo_grid">
+				<div class="logo">
+					<h1> THE MAX Celulares </h1>
+					<h4> Controle de estoque e venda </h4>
+				</div>
+				<div class="menu_global">
+					<ul>
+						<li> Olá <?php include "valida_login.php"; ?> </li>
+						<li><a href="logout.php" class="active">Sair</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="menu_global">
-				<ul>
-					<li> Olá <?php include "valida_login.php"; ?> </li>
-					<li><a href="logout.php" class="active">Sair</a></li>
-				</ul>
+			<div class="menu_local">
+				<?php include "menu_local.php"; ?>
 			</div>
-		</div>
 			<div class="conteudo_especifico">
 				<div class="centralizar">
 					<h1> CADASTRO DE FUNCIONÁRIOS </h1>
