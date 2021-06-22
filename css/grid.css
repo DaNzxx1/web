@@ -1,0 +1,46 @@
+/* GRID DAS PÁGINAS */
+.topo {
+    grid-area: header;
+}
+
+.menu_local {
+    grid-area: menu;
+}
+
+.conteudo_especifico {
+    grid-area: main;
+}
+
+.rodape {
+    grid-area: footer;
+}
+
+.principal {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'menu menu main main main main'
+        'footer footer footer footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.principal>div {
+    padding: 20px 0;
+}
+
+/* GRID DO TOPO */
+.logo {
+    grid-area: logo;
+}
+
+.menu_global {
+    grid-area: menu_global;
+}
+
+.topo_grid {
+    display: grid;
+    grid-template-areas:
+        'logo menu_global';
+    grid-gap: 10px;
+}
