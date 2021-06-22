@@ -7,10 +7,11 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Exibição do Celular</title>
+	<title>Exibe Celular</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 </head>
@@ -36,15 +37,14 @@ session_start();
 			<div class="centralizar">
 				<h1> EXIBIÇÃO DE DADOS DE CELULARES </h1>
 			</div>
+
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
 				$cod = $_GET['codigo'];
 
-				$sql_consulta = "SELECT marca_cel, nome_cel, processador_cel, memoria_cel, 
-                                                armazenamento_cel, camera_frontal_cel, camera_traseira_cel,
-                                                so_cel, bateria_cel, preco_cel
-												FROM celular
+				$sql_consulta = "SELECT marca_cel, nome_cel, numero_serie_cel, processador_cel, memoria_cel, armazenamento_cel,
+                camera_frontal_cel, camera_traseira_cel, so_cel, bateria_cel, preco_cel FROM celular
 												WHERE id_cel = '$cod'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
@@ -52,56 +52,58 @@ session_start();
 				?>
 
 				<table class="name">
-					<tr>
+                    <tr>
 						<td class="borda-direita"> <strong>Marca:</strong> </td>
 						<td> <?php echo $registro[0] ?> </td>
-					</tr>
+					</tr>                
 					<tr>
 						<td class="borda-direita"> <strong>Nome:</strong> </td>
 						<td> <?php echo $registro[1] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong>Processador:</strong> </td>
+						<td class="borda-direita"> <strong>Numero de Série:</strong> </td>
 						<td> <?php echo $registro[2] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong>Memória:</strong> </td>
+						<td class="borda-direita"> <strong>Processador:</strong> </td>
 						<td> <?php echo $registro[3] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong>Armazenamento:</strong> </td>
+						<td class="borda-direita"> <strong>Memória:</strong> </td>
 						<td> <?php echo $registro[4] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong> Câmera Frontal:</strong> </td>
+						<td class="borda-direita"> <strong>Armazenamento:</strong> </td>
 						<td> <?php echo $registro[5] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong> Câmera Traseira:</strong> </td>
+						<td class="borda-direita"> <strong> Câmera Frontal:</strong> </td>
 						<td> <?php echo $registro[6] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong> Sistema Operacional:</strong> </td>
+						<td class="borda-direita"> <strong> Câmera Traseira:</strong> </td>
 						<td> <?php echo $registro[7] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong> Bateria:</strong> </td>
+						<td class="borda-direita"> <strong> Sistema Operacional:</strong> </td>
 						<td> <?php echo $registro[8] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong> Preço:</strong> </td>
+						<td class="borda-direita"> <strong> Bateria:</strong> </td>
 						<td> <?php echo $registro[9] ?> </td>
 					</tr>
+					<tr>
+						<td class="borda-direita"> <strong> Preço:</strong> </td>
+						<td> <?php echo $registro[10] ?> </td>
+					</tr>
 				</table>
-
 			</div>
 		</div>
 		<div class="rodape">
 			<div id="texto_institucional">
 				<div id="texto_institucional">
-					<h6> ETB - Escola Técnica de Brasília </h6>
-					<h6> Curso - Técnico em Informática </h6>
-					<h6> Disciplina - Desenvolvimento Web II </h6>
+					<h6> MAX - CONTROL </h6>
+					<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
 				</div>
 			</div>
 			<div id="redes_sociais">
