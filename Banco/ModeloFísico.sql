@@ -27,10 +27,10 @@ CREATE TABLE FUNCIONARIOS
 
 CREATE TABLE VENDAS
 (
-    ID_VEN       INT      NOT NULL,
-    DATAHORA_VEN DATETIME NOT NULL,
     ID_FUN       INT      NOT NULL,
-    PRIMARY KEY (ID_VEN, ID_FUN)
+    ID_CEL       INT      NOT NULL,
+    DATAHORA_VEN DATETIME NOT NULL,
+    PRIMARY KEY (ID_FUN, ID_CEL)
 );
 
 CREATE TABLE CELULAR
@@ -48,8 +48,7 @@ CREATE TABLE CELULAR
     BATERIA_CEL         VARCHAR(10) NOT NULL,
     PRECO_CEL           VARCHAR(15) NOT NULL,
     FILA_COMPRA_CEL     CHAR(1)     NOT NULL,
-    ID_VEN              INT         NOT NULL,
-    PRIMARY KEY (ID_CEL, ID_VEN)
+    PRIMARY KEY (ID_CEL)
 );
 
 START TRANSACTION;
@@ -91,37 +90,91 @@ VALUES
 (31,'Carlos Calebe Murilo Costa','75191886208','172662096','carloscalebemurilocosta_@technocut.com.br','1949-01-03','8827508000','carloscale','123','nao ativo','estoquista','75028891203','2021-02-01',NULL,'CE','63100055','Centro','Rua Desembargador Edmilson da Cruz Neves','625');
 
 INSERT INTO VENDAS 
-(ID_VEN, DATAHORA_VEN, ID_FUN)
+(ID_FUN, DATAHORA_VEN, ID_CEL)
 VALUES
-(1,'2021-06-03 07:15:06',8),
-(2,'2021-06-03 13:25:52',16),
-(3,'2021-06-03 15:23:05',5),
-(4,'2021-06-04 06:35:59',5),
-(5,'2021-06-04 06:39:44',12),
-(6,'2021-06-04 12:09:40',26),
-(7,'2021-06-07 09:52:53',2),
-(8,'2021-06-07 11:14:53',2),
-(9,'2021-06-07 17:02:08',28),
-(10,'2021-06-08 08:31:30',5),
-(11,'2021-06-08 15:22:19',16),
-(12,'2021-06-09 10:01:24',26),
-(13,'2021-06-09 12:42:44',16),
-(14,'2021-06-09 13:15:20',5),
-(15,'2021-06-10 07:38:07',13),
-(16,'2021-06-10 07:39:58',2),
-(17,'2021-06-11 06:32:24',26),
-(18,'2021-06-11 07:16:26',28),
-(19,'2021-06-11 08:06:40',10),
-(20,'2021-06-11 10:18:44',13),
-(21,'2021-06-11 11:18:44',16),
-(22,'2021-06-11 12:27:39',13),
-(23,'2021-06-14 13:55:57',28),
-(24,'2021-06-14 18:06:40',10),
-(25,'2021-06-15 08:01:03',5),
-(26,'2021-06-15 12:21:15',16),
-(27,'2021-06-16 08:02:15',8),
-(28,'2021-06-16 13:18:49',5),
-(29,'2021-06-18 13:13:41',28),
-(30,'2021-06-21 16:21:02',10);
+(8,'2021-06-03 07:15:06',50),
+(16,'2021-06-03 13:25:52',13),
+(5,'2021-06-03 15:23:05',30),
+(5,'2021-06-04 06:35:59',33),
+(12,'2021-06-04 06:39:44',34),
+(26,'2021-06-04 12:09:40',15),
+(2,'2021-06-07 09:52:53',37),
+(2,'2021-06-07 11:14:53',2),
+(28,'2021-06-07 17:02:08',3),
+(5,'2021-06-08 08:31:30',18),
+(16,'2021-06-08 15:22:19',39),
+(26,'2021-06-09 10:01:24',14),
+(16,'2021-06-09 12:42:44',45),
+(5,'2021-06-09 13:15:20',42),
+(13,'2021-06-10 07:38:07',48),
+(2,'2021-06-10 07:39:58',35),
+(26,'2021-06-11 06:32:24',16),
+(28,'2021-06-11 07:16:26',47),
+(10,'2021-06-11 08:06:40',36),
+(13,'2021-06-11 10:18:44',41),
+(16,'2021-06-11 11:18:44',40),
+(13,'2021-06-11 12:27:39',31),
+(28,'2021-06-14 13:55:57',49),
+(10,'2021-06-14 18:06:40',1),
+(5,'2021-06-15 08:01:03',9),
+(16,'2021-06-15 12:21:15',46),
+(8,'2021-06-16 08:02:15',28),
+(5,'2021-06-16 13:18:49',32),
+(28,'2021-06-18 13:13:41',5),
+(10,'2021-06-21 16:21:02',22);
+
+INSERT INTO celular
+(ID_CEL, NUMERO_SERIE_CEL, MARCA_CEL, NOME_CEL, PROCESSADOR_CEL, MEMORIA_CEL, ARMAZENAMENTO_CEL, CAMERA_FRONTAL_CEL, CAMERA_TRASEIRA_CEL, SO_CEL, BATERIA_CEL, PRECO_CEL, FILA_COMPRA_CEL)
+VALUES 
+(1,'U9YMR25XJQ0','Xiaomi','Redmi 9T','4x 2.0 GHz Kryo 260 Gold + 4x 1.8 GHz Kryo 260 Silver','4 GB','128 GB','8 Mp F 2.05','48 Mp + 8 Mp + 2 Mp + 2 Mp','Android 10 MIUI 12','6000 mAh','R$ 1100','V'), 
+(2,'GMTQGPC948N','Xiaomi','Poco M3','4x 2.0 GHz Kryo 260 Gold + 4x 1.8 GHz Kryo 260 Silver','4 GB','128 GB','8 Mp F 2.05','48 Mp + 2 Mp + 2 Mp','Android 10 MIUI 12','6000 mAh','R$ 1091','V'), 
+(3,'5XJP8AXQ6HP','LG','K22','1.3 GHz Quad Core','2 GB','32 GB','5 Mp','13 Mp + 2 Mp','Android 10','3000 mAh','R$ 579','V'), 
+(4,'TT8MPUW7K3K','Asus','Zenfone Shot Plus','1.8 GHz 8 Core','4 GB','64 GB','8 Mp F 2','12 Mp + 5 Mp + 8 Mp','Android 9 Pie','4000 mAh','R$ 929','V'), 
+(5,'5KQLMQFL5A8','Asus','ZenFone Max Plus (M2)','1.8 GHz 8 Core','3 GB','32 GB','8 Mp','12 Mp + 5 Mp','Android 8.1 Oreo','4000 mAh','R$ 836','V'), 
+(6,'EP6ECMAK3U5','Samsung','Galaxy A02s','1.8 GHz 8 Core','3 GB','32 GB','5 Mp F 2.2','13 Mp + 2 Mp + 2 Mp','Android 10 Samsung One UI 2.5','5000 mAh','R$ 746','V'), 
+(7,'18KMTIYNSSY','Xiaomi','Redmi Note 9 4G','4x 2.0 GHz Kryo 260 Gold + 4x 1.8 GHz Kryo 260 Silver','4 GB','128 GB','8 Mp F 2','48 Mp + 8 Mp + 2 Mp','Android 10 MIUI 12','6000 mAh','R$ 1199','V'), 
+(8,'94AP9MKAKPQ','Asus','ZenFone Max Shot','1.8 GHz 8 Core','3 GB','32 GB','8 Mp F 2','12 Mp + 5 Mp + 8 Mp','Android 9 Pie','4000 mAh','R$ 929','V'), 
+(9,'GTTTU4NFZED','Samsung','Galaxy A7 2017','1.9 GHz 8 Core','3 GB','32 GB','16 Mp','16 Mp','Android 8.0 Samsung Experience 9.0 Oreo','3600 mAh','R$ 899','V'), 
+(10,'ARYIFB2Z02S','Xiaomi','Redmi 9','2x 2.0 GHz Cortex-A75 + 6x 1.8 GHz Cortex-A55','3 GB','32 GB','8 Mp F 2','13 Mp + 8 Mp + 5 Mp + 2 Mp','Android 10 MIUI 12','5020 mAh','R$ 843','V'), 
+(11,'1ISDSTN9AUS','Xiaomi','Redmi Note 8','4x 2.0 GHz Kyro 260 + 4x 1.8 GHz Kyro 260','4 GB','64 GB','13 Mp F 2','48 Mp + 8 Mp + 2 Mp + 2 Mp','Android 10 MIUI 12','4000 mAh','R$ 1213','V'), 
+(12,'TFDOSJEYMEF','Multilaser','G Pro','4x 1.6 Ghz Cortex-A55 + 4x 1.2 GHz Cortex A-55','2 GB','32 GB','5 Mp','13 Mp + 2 Mp','Android 9 Pie','4000 mAh','R$ 619','V'), 
+(13,'BNLDGA38TTG','Motorola','Moto E7 Plus','4x 1.8 GHz Kryo 240 + 4x 1.6 GHz Kryo 240','4 GB','64 GB','8 Mp F 2.2','48 Mp + 2 Mp','Android 10','5000 mAh','R$ 899','V'), 
+(14,'DX0XBZYWHH2','Xiaomi','Redmi Note 8 Pro','2x 2.05 GHz Cortex A76 + 6x 2.0 GHz Cortex A55','6 GB','128 GB','20 Mp F 2','64 Mp + 8 Mp + 2 Mp + 2 Mp','Android 10 MIUI 11','4500 mAh','R$ 1419','V'), 
+(15,'LWKU0985E9J','Apple','iPhone 5S','1.3 GHz Dual Core','1 GB','64 GB','1.2 Mp','8 Mp','iOS 12','1570 mAh','R$ 752','V'), 
+(16,'QCPR6NBPUED','LG','K22 Plus','1.3 GHz Quad Core','3 GB','64 GB','5 Mp','13 Mp + 2 Mp','Android 10','3000 mAh','R$ 699','V'), 
+(17,'K2E9P1HXTSJ','Samsung','Galaxy A30','2x 1.8 GHz Cortex-A73 + 6x 1.6 GHz Cortex-A53','4 GB','64 GB','16 Mp F 2','16 Mp + 5 Mp','Android 10 Samsung One UI 2.0','4000 mAh','R$ 1099','V'), 
+(18,'4DA4B68BFPE','Motorola','Moto G8 Power','4x 2.0 GHz Kyro 260 + 4x 1.8 GHz Kyro 260','4 GB','64 GB','16 Mp F 2','16 Mp + 2 Mp + 8 Mp + 8 Mp','Android 10','5000 mAh','R$ 1272','V'), 
+(19,'W7AA8PUDT56','LG','K61','4x 2.3 GHz Cortex-A53 + 4x 1.8 GHz Cortex-A53','4 GB','128 GB','16 Mp F 2','48 Mp + 8 Mp + 2 Mp + 5 Mp','Android 10 LG UX 9.0','4000 mAh','R$ 1118','V'), 
+(20,'Z5LQC9AUJ5Z','Xiaomi','Redmi Note 9','2x Cortex A75 2GHz + 6x Cortex A55 1.8GHz','3 GB','64 GB','13 Mp F 2.25','48 Mp + 8 Mp + 2 Mp + 2 Mp','Android 10 MIUI 11','5020 mAh','R$ 1022','V'), 
+(21,'KZ1GY2MD78B','Motorola','Moto G9 Play','4x 2.0 GHz Kryo 260 Gold + 4x 1.8 GHz Kryo 260 Silver','4 GB','64 GB','8 Mp F 2.2','48 Mp + 2 Mp + 2 Mp','Android 10','5000 mAh','R$ 1019','V'), 
+(22,'79AMTD7P9WK','Asus','ZenFone Max Pro (M2)','4x 2.2 GHz Kyro 260 + 4x 1.84 GHz Kyro 260','4 GB','64 GB','13 Mp F 2','12 Mp + 5 Mp','Android 8.1 Oreo','5000 mAh','R$ 1099','V'), 
+(23,'LCMKC8T8Y4X','Motorola','Moto E7','4x 2.0 GHz Cortex-A53 + 4x 1.5 GHz Cortex-A53','2 GB','32 GB','5 Mp','48 Mp + 2 Mp','Android 10','4000 mAh','R$ 748','V'), 
+(24,'OBKHNOEMPCL','Samsung','Galaxy Xcover Pro','4x 2.3 GHz Cortex-A73 + 4x 1.7 GHz Cortex-A53','4 GB','64 GB','13 Mp','25 Mp + 8 Mp','Android 10 Samsung One UI 2.0','4020 mAh','R$ 1449','V'), 
+(25,'PP6TMLT8X5B','Xiaomi','Redmi 9A','2 GHz 8 Core','2 GB','32 GB','5 Mp F 2.2','13 Mp','Android 10 MIUI 11','5000 mAh','R$ 729','V'), 
+(26,'9GD80BWUZBX','Xiaomi','Redmi Note 7','4x 2.2 GHz Kyro 260 + 4x 1.8 GHz Kyro 260','3 GB','32 GB','13 Mp F 2','48 Mp + 5 Mp','Android 10 MIUI 12','4000 mAh','R$ 1348','V'), 
+(27,'AJAOON5Q0K6','Xiaomi','Redmi 5 Plus','2 GHz 8 Core','3 GB','32 GB','5 Mp','12 Mp','Android 8.1 MIUI 10 Oreo','4000 mAh','R$ 1049','V'), 
+(28,'W5I8OHUJIUP','Motorola','Moto E7 Power','4x 2.0 GHz Cortex-A53 + 4x 1.5 GHz Cortex-A53','2 GB','32 GB','5 Mp F 2.2','13 Mp + 2 Mp','Android 10','5000 mAh','R$ 711','V'), 
+(29,'MTGNG2DHODR','Motorola','Moto G6 Plus','4x 2.2 GHz Cortex-A53 + 4x 1.8 GHz Cortex A53','4 GB','64 GB','8 Mp F 2.2','12 Mp + 5 Mp','Android 9 Pie','3200 mAh','R$ 1164','V'), 
+(30,'PS64NMTZJGT','Xiaomi','Mi 10T','1x 2.84 GHz Cortex A77 + 3x 2.42 GHz Cortex A77 + 4x 1.8 GHz Cortex A53','8 GB','128 GB','20 Mp F 2.2','64 Mp + 13 Mp + 5 Mp','Android 10 MIUI 12','5000 mAh','R$ 2810','V'), 
+(31,'RF800H8LYK5','Motorola','Moto E6s','4x 2 GHz Cortex-A53 + 4x 1.5 GHz Cortex-A53','2 GB','32 GB','5 Mp F 2.2','13 Mp + 2 Mp','Android 9 Pie','3000 mAh','R$ 698','N'), 
+(32,'5ZCX2JB62RO','Xiaomi','Redmi 8A','4x 1.95 GHz Cortex-A53 + 4x 1.45 GHz Cortex-A53','2 GB','32 GB','8 Mp F 2','12 Mp','Android 10 MIUI 11','5000 mAh','R$ 828','N'), 
+(33,'YL2B6QLCA4H','Xiaomi','Poco X3 NFC','2x 2.3 GHz Kryo 470 Gold + 6x 1.8 GHz Kryo 470 Silver','6 GB','128 GB','20 Mp F 2.2','64 Mp + 13 Mp + 2 Mp + 2 Mp','Android 10 MIUI 12','5160 mAh','R$ 1499','N'), 
+(34,'8T8GRK52G0Q','Motorola','Moto G9 Plus','2x 2.2 GHz Kryo 470 Gold + 6x 1.8 GHz Kryo 470 Silver','4 GB','128 GB','16 Mp F 2','64 Mp + 8 Mp + 2 Mp + 2 Mp','Android 10','5000 mAh','R$ 1580','N'), 
+(35,'IMJSOFK6T9I','Sony','Xperia XA Ultra','2 GHz 8 Core','3 GB','16 GB','16 Mp','21.5 Mp','Android 6.0.1 Marshmallow','2700 mAh','R$ 839','N'), 
+(36,'LBE3MG3GO20','Samsung','Galaxy A02','1.5 GHz Quad Core','3 GB','32 GB','5 Mp F 2','13 Mp + 2 Mp','Android 10 Samsung One UI 2.0','5000 mAh','R$ 559','N'), 
+(37,'N9HY4A4TRD7','Asus','ZenFone Max Pro (M1)','Octa-core 1.8 GHz Kryo 260 + 1.6 GHz Kryo 260','3 GB','32 GB','8 Mp F 2.2','13 Mp + 5 Mp','Android 8.0 Oreo','5000 mAh','R$ 1149','N'), 
+(38,'1WM76JQ6R37','Samsung','Galaxy A10s','4x 2 GHz Cortex-A53 + 4x 1.5 GHz Cortex-A53','2 GB','32 GB','8 Mp F 2','13 Mp + 2 Mp','Android 10 Samsung One UI 2.0','4000 mAh','R$ 700','N'), 
+(39,'WWK3PQIIHWH','LG','K41S','4x 2 GHz Cortex-A53 + 4x 1.5 GHz Cortex-A53','3 GB','32 GB','8 Mp F 2','13 Mp + 5 Mp + 2 Mp + 2 Mp','Android 10','4000 mAh','R$ 738','N'), 
+(40,'PKCPFX7ITZ4','Xiaomi','Redmi 7A','4x 1.95 GHz Cortex-A53 + 4x 1.45 GHz Cortex A53','2 GB','16 GB','5 Mp','13 Mp','Android 9 MIUI 10 Pie','4000 mAh','R$ 820','N'), 
+(41,'7W1GDXY6UKS','Xiaomi','Redmi Note 9T','2x 2.4 GHz Cortex-A76 + 6x 2.0 GHz Cortex-A55','4 GB','128 GB','13 Mp F 2.25','48 Mp + 2 Mp + 2 Mp','Android 10 MIUI 12','5000 mAh','R$ 1389','N'), 
+(42,'5E8MMHT9O9J','Xiaomi','Redmi Note 8T','4x 2.0 GHz Kyro 260 + 4x 1.8 GHz Kyro 260','3 GB','32 GB','13 Mp F 2','48 Mp + 8 Mp + 2 Mp + 2 Mp','Android 9 MIUI 10 Pie','4000 mAh','R$ 1449','N'), 
+(43,'RPPENYZDSWZ','Motorola','Moto G8 Plus','4x 2.0 GHz Kyro 260 + 4x 1.8 GHz Kyro 260','4 GB','64 GB','25 Mp F 2','48 Mp + 16 Mp + 5 Mp','Android 10','4000 mAh','R$ 1549','N'), 
+(44,'J237PZS0IO5','Xiaomi','Redmi 9C','2.3 GHz 8 Core','2 GB','32 GB','5 Mp F 2.2','13 Mp + 2 Mp + 2 Mp','Android 10 MIUI 11','5000 mAh','R$ 844','N'), 
+(45,'H1HOLG4LQL1','LG','Q6','1.4 GHz 8 Core','3 GB','32 GB','5 Mp','13 Mp','Android 7.1.1 LG UX 6.0 UI Nougat','3000 mAh','R$ 999','N'), 
+(46,'6PFUEID08NR','LG','Velvet','4x 2.8 GHz Kryo 385 + 4x 1.7 GHz Kryo 385','6 GB','128 GB','16 Mp F 1.9','48 Mp + 8 Mp + 5 Mp','Android 10 LG UX 9.0','4300 mAh','R$ 2448','N'), 
+(47,'1K8P3ZYHT59','Motorola','One Fusion','2x 2.2 GHz Kryo 360 + 6x 1.7 GHz Kryo 360','4 GB','64 GB','8 Mp F 2','48 Mp + 8 Mp + 5 Mp + 2 Mp','Android 10','5000 mAh','R$ 1299','N'), 
+(48,'1KK8EWOPNL5','Xiaomi','Redmi Note 9 Pro','2x 2.3 GHz Kryo 465 Gold + 6x 1.8 GHz Kryo 465 Silver','6 GB','128 GB','16 Mp F 2.48','64 Mp + 8 Mp + 5 Mp + 2 Mp','Android 10 MIUI 11','5020 mAh','R$ 1652','N'), 
+(49,'S691AZZNHPY','Samsung','Galaxy A01','4x 1.95 GHz Cortex-A53 + 4x 1.45 GHz Cortex-A53','2 GB','32 GB','5 Mp F 2.2','13 Mp + 2 Mp','Android 10 Samsung One UI 2.0','3000 mAh','R$ 593','N'), 
+(50,'F6R4U0NQZF1','Lenovo','Vibe K6','4x 1.4 GHz Cortex-A53 + 4x 1.1 GHz Cortex-A53','2 GB','32 GB','8 Mp','13 Mp','Android 6.0 Marshmallow','3000 mAh','R$ 585','N');
 
 COMMIT;
