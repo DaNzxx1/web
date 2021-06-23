@@ -45,7 +45,7 @@ session_start();
 					<?php
 					$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-					$sql_consulta = "SELECT id_fun, nome_fun, email_fun, telefone_fun, bairro_fun, funcao_fun, status_fun FROM funcionarios";
+					$sql_consulta = "SELECT id_fun, nome_fun, email_fun, telefone_fun, funcao_fun, status_fun FROM funcionarios";
 					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 					?>
 					<table class="centralizar listaFun">
@@ -58,9 +58,6 @@ session_start();
 							</td>
 							<td style="border-bottom: 1px solid black!important;">
 								<p> Telefone </p>
-							</td>
-							<td style="border-bottom: 1px solid black!important;">
-								<p> Bairro </p>
 							</td>
 							<td style="border-bottom: 1px solid black!important;">
 								<p> Função </p>
@@ -102,11 +99,6 @@ session_start();
 								<td>
 									<p>
 										<?php echo "$registro[5]"; ?>
-									</p>
-								</td>
-								<td>
-									<p>
-										<?php echo "$registro[6]"; ?>
 									</p>
 								</td>
 								<td class="direita">

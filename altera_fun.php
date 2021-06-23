@@ -167,7 +167,7 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Telefone</label>
-								<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>">
+								<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>" readonly>
 							</div>
 							<div class="campo">
 								<label>Data de Nascimento</label>
