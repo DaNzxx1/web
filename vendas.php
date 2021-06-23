@@ -52,13 +52,13 @@ session_start();
 				<table class="centralizar listaFun">
 					<tr>
 						<td style="border-bottom: 1px solid black!important;">
-							<p> ID Venda </p>
+							<p> Funcionario </p>
+						</td>
+						<td style="border-bottom: 1px solid black!important;">
+							<p> Celular </p>
 						</td>
 						<td style="border-bottom: 1px solid black!important;">
 							<p> Data e Hora </p>
-						</td>
-						<td style="border-bottom: 1px solid black!important;">
-							<p> Funcionario </p>
 						</td>
 						<td style="border-bottom: 1px solid black!important;">
 							<p> Ação </p>
@@ -70,7 +70,7 @@ session_start();
 						<tr>
 							<td class="esquerda">
 								<p>
-									<a class="exibe" href="exibe_venda.php?codigo=<?php echo $registro[0] ?>" title="Exibir Venda">
+									<a class="exibe" href="exibe_venda.php?id_fun=<?php echo $registro[0] ?>&id_cel=<?php echo $registro[1] ?>" title="Exibir Venda">
 										<i class="fas fa-stream" style="color: white;"></i>
 									</a>&nbsp;
 									<?php echo "$registro[0]"; ?>
@@ -78,20 +78,20 @@ session_start();
 							</td>
 							<td>
 								<p>
+									<?php echo "$registro[1]"; ?>
+								</p>
+							</td>
+							<td>
+								<p>
 									<?php
-									$d = strtotime($registro[1]);
+									$d = strtotime($registro[2]);
 									echo date("d/m/Y H:i:s", $d);
 									?>
 								</p>
 							</td>
 							<td>
 								<p>
-									<?php echo "$registro[2]"; ?>
-								</p>
-							</td>
-							<td>
-								<p>
-									<a class="editar" href="altera_venda.php?codigo=<?php echo $registro[0] ?>" title="Editar Venda">
+									<a class="editar" href="altera_venda.php?id_fun=<?php echo $registro[0] ?>&id_cel=<?php echo $registro[1] ?>" title="Editar Venda">
 										<i class="fas fa-user-edit" style="color: white;"></i>
 									</a>
 									<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Venda">

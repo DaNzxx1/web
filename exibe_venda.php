@@ -41,26 +41,33 @@ session_start();
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
-				$cod = $_GET['codigo'];
+				$fun = $_GET['id_fun'];
+				$cel = $_GET['id_cel'];
 
 				$sql_consulta = "SELECT * FROM vendas
-								WHERE id_ven = '$cod'";
+								WHERE id_fun = '$fun'
+								AND id_cel = '$cel'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
 				$registro = mysqli_fetch_row($resultado_consulta);
 				?>
 				<table class="name">
 					<tr>
-						<td class="borda-direita"> <strong>ID Venda:</strong> </td>
+						<td class="borda-direita"> <strong>Funcionario:</strong> </td>
 						<td> <?php echo $registro[0] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong>Data e Hora:</strong> </td>
+						<td class="borda-direita"> <strong>Celular:</strong> </td>
 						<td> <?php echo $registro[1] ?> </td>
 					</tr>
 					<tr>
-						<td class="borda-direita"> <strong>Funcionario:</strong> </td>
-						<td> <?php echo $registro[2] ?> </td>
+						<td class="borda-direita"> <strong>Data e Hora:</strong> </td>
+						<td>
+							<?php
+							$d = strtotime($registro[2]);
+							echo date("d/m/Y H:i:s", $d);
+							?>
+						</td>
 					</tr>
 				</table>
 			</div>
