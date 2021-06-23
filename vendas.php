@@ -38,7 +38,7 @@ session_start();
 		<div class="conteudo_especifico centralizar">
 			<h1> VENDAS </h1>
 			<div>
-				<a class="div_esquerda botao" href="cadastra_venda.php" title="Cadastrar Venda">
+				<a class="div_esquerda botao" href="registra_venda.php" title="Cadastrar Venda">
 					Cadastrar Venda <i class="fas fa-user-plus"></i>
 				</a>
 			</div>
