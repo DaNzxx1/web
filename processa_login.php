@@ -19,7 +19,7 @@
                         (
                             LOGIN_FUN = '$login' AND SENHA_FUN = '$senha' AND STATUS_FUN = 'ativo'
                         ) OR(
-                            LOGIN_FUN = 'ADMIN' AND SENHA_FUN = '$senha'
+                            LOGIN_FUN = 'admin' AND SENHA_FUN = '$senha'
                         )";
     
     $resultado_consulta = mysqli_query ($conectar, $sql_consulta);
