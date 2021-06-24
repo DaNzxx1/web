@@ -37,7 +37,6 @@
 .conteudo_especifico {
 	padding: 5px;
 	grid-template-columns: 50% 50%;
-	margin: 0px auto 5px auto;
 	grid-gap: 20px;
 }
 

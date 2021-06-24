@@ -38,7 +38,7 @@ session_start();
 		<div class="conteudo_especifico centralizar">
 			<h1> VENDAS </h1>
 			<div>
-				<a class="div_esquerda botao" href="registra_venda.php" title="Cadastrar Venda">
+				<a class="botao" href="registra_venda.php" title="Cadastrar Venda">
 					Cadastrar Venda <i class="fas fa-user-plus"></i>
 				</a>
 			</div>
@@ -46,7 +46,18 @@ session_start();
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-				$sql_consulta = "SELECT * FROM vendas";
+				$sql_consulta = "SELECT
+									vendas.ID_FUN,
+									vendas.ID_CEL,
+									DATAHORA_VEN,
+									funcionarios.NOME_FUN,
+									concat(celular.MARCA_CEL, ' ', celular.NOME_CEL)
+								FROM
+									vendas
+								JOIN funcionarios
+									ON funcionarios.ID_FUN = vendas.ID_FUN
+								JOIN celular
+									ON celular.ID_CEL = vendas.ID_CEL";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
 				<table class="centralizar listaFun">
@@ -73,12 +84,12 @@ session_start();
 									<a class="exibe" href="exibe_venda.php?id_fun=<?php echo $registro[0] ?>&id_cel=<?php echo $registro[1] ?>" title="Exibir Venda">
 										<i class="fas fa-stream" style="color: white;"></i>
 									</a>&nbsp;
-									<?php echo "$registro[0]"; ?>
+									<?php echo "$registro[3]"; ?>
 								</p>
 							</td>
 							<td>
 								<p>
-									<?php echo "$registro[1]"; ?>
+									<?php echo "$registro[4]"; ?>
 								</p>
 							</td>
 							<td>
