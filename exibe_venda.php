@@ -44,9 +44,17 @@ session_start();
 				$fun = $_GET['id_fun'];
 				$cel = $_GET['id_cel'];
 
-				$sql_consulta = "SELECT * FROM vendas
-								WHERE id_fun = '$fun'
-								AND id_cel = '$cel'";
+				$sql_consulta = "SELECT 
+									FUNCIONARIOS.NOME_FUN,
+									CONCAT(CELULAR.MARCA_CEL, ' ', CELULAR.NOME_CEL),
+									DATAHORA_VEN
+								FROM VENDAS
+								JOIN FUNCIONARIOS
+									ON FUNCIONARIOS.ID_FUN = VENDAS.ID_FUN
+								JOIN CELULAR
+									ON CELULAR.ID_CEL = VENDAS.ID_CEL
+								WHERE VENDAS.ID_FUN = '$fun'
+								AND VENDAS.ID_CEL = '$cel'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
 				$registro = mysqli_fetch_row($resultado_consulta);
