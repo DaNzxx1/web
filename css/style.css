@@ -35,7 +35,13 @@ fieldset.grupo .campo {
     margin-right: 10px;
 }
 
-.campo input[type="text"], .campo input[type="email"], .campo input[type="date"], .campo input[type="password"], .campo select {
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="date"],
+.campo input[type="time"],
+.campo input[type="datetime-local"],
+.campo input[type="password"],
+.campo select {
     padding: 0.2em;
     border: 1px solid black;
     box-shadow: 2px 2px 2px rgb(0,0,0,0.2);

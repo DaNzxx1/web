@@ -57,7 +57,7 @@ USE themax;
 INSERT INTO FUNCIONARIOS 
 (ID_FUN, NOME_FUN, CPF_FUN, RG_FUN, EMAIL_FUN, DATA_NASCIMENTO_FUN, TELEFONE_FUN, LOGIN_FUN, SENHA_FUN, STATUS_FUN, FUNCAO_FUN, CARTEIRA_DE_TRABALHO_FUN, DATE_ADMISSAO_FUN, DATA_DEMISSAO_FUN, UF_FUN, CEP_FUN, BAIRRO_FUN, ENDERECO_FUN, END_NUMERO_FUN)
 VALUES 
-(1,'Administrador do Sistema','','','','','','admin','2','ativo','administrador','','',NULL,'','','','',''),
+(1,'Administrador do Sistema','','','','','','admin','2','nao ativo','administrador','','',NULL,'','','','',''),
 (2,'Mateus Danilo Baptista','22535019647','388269558','mateusdanilobaptista-73@redex.com.br','1970-03-16','91989779916','mateusdani','123','ativo','estoquista','19476791732','2021-02-01',NULL,'PA','66833115','Tapanã (Icoaraci)','Alameda Tocantins','772'),
 (3,'Francisco Luís da Costa','55824841837','429824671','franciscoluisdacosta-73@power.alstom.com','2000-09-09','8627739950','franciscol','123','nao ativo','estoquista','60390801422','2021-02-01',NULL,'PI','64028400','Santo Antônio','Rua Alison Rodrigues do Prado','471'),
 (4,'Rafael Ryan Almeida','64253789307','391108438','rafaelryanalmeida-76@santosferreira.abv.br','1950-08-18','6826336004','rafaelryan','123','nao ativo','estoquista','25499585955','2021-02-01',NULL,'AC','69900066','Centro','Rua Marechal Deodoro','725'),
