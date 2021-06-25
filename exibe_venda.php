@@ -41,8 +41,7 @@ session_start();
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
-				$id_fun = $_GET['id_fun'];
-				$id_cel = $_GET['id_cel'];
+				$id_ven = $_GET['id_ven'];
 
 				$sql_consulta = "SELECT 
 									FUNCIONARIOS.NOME_FUN,
@@ -53,8 +52,7 @@ session_start();
 									ON FUNCIONARIOS.ID_FUN = VENDAS.ID_FUN
 								JOIN CELULAR
 									ON CELULAR.ID_CEL = VENDAS.ID_CEL
-								WHERE VENDAS.ID_FUN = '$id_fun'
-								AND VENDAS.ID_CEL = '$id_cel'";
+								WHERE ID_VEN = '$id_ven'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
 				$registro = mysqli_fetch_row($resultado_consulta);

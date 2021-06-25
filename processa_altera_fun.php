@@ -20,7 +20,7 @@ if ($funcao == "administrador") {
 
     } else {
 
-        echo "<script> alert ('Ocorreu um erro no servidor. A senha do administrador não foi altarada. Volte e tente denovo'); </script>";
+        echo "<script> alert ('Ocorreu um erro no servidor. A senha do administrador não foi alterada. Volte e tente denovo'); </script>";
         echo "<script> location.href = ('altera_fun.php?codigo=$cod'); </script>";
         exit();
 
