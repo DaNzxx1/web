@@ -53,7 +53,7 @@ $condicao = $sql_resultado_nao_vendido == true
 
 if ($condicao) {
     echo "<script> alert ('Venda alterada com sucesso'); </script>";
-    echo "<script> location.href = ('altera_venda.php'); </script>";
+    echo "<script> location.href = ('altera_venda.php'?id_ven=$id_ven'); </script>";
     exit();
 } else {
     echo "<script> alert ('Ocorreu um erro no servidor.'); </script>";
