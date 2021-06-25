@@ -47,17 +47,16 @@ session_start();
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
 
 				$sql_consulta = "SELECT
-									vendas.ID_FUN,
-									vendas.ID_CEL,
-									DATAHORA_VEN,
-									funcionarios.NOME_FUN,
-									concat(celular.MARCA_CEL, ' ', celular.NOME_CEL)
+									ID_VEN,
+									FUNCIONARIOS.NOME_FUN,
+									CONCAT(CELULAR.MARCA_CEL, ' ', CELULAR.NOME_CEL),
+									DATAHORA_VEN
 								FROM
-									vendas
-								JOIN funcionarios
-									ON funcionarios.ID_FUN = vendas.ID_FUN
-								JOIN celular
-									ON celular.ID_CEL = vendas.ID_CEL";
+									VENDAS
+								JOIN FUNCIONARIOS
+									ON FUNCIONARIOS.ID_FUN = VENDAS.ID_FUN
+								JOIN CELULAR
+									ON CELULAR.ID_CEL = VENDAS.ID_CEL";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
 				<table class="centralizar listaFun">
@@ -81,28 +80,28 @@ session_start();
 						<tr>
 							<td class="esquerda">
 								<p>
-									<a class="exibe" href="exibe_venda.php?id_fun=<?php echo $registro[0] ?>&id_cel=<?php echo $registro[1] ?>" title="Exibir Venda">
+									<a class="exibe" href="exibe_venda.php?id_ven=<?php echo $registro[0] ?>" title="Exibir Venda">
 										<i class="fas fa-stream" style="color: white;"></i>
 									</a>&nbsp;
-									<?php echo "$registro[3]"; ?>
+									<?php echo "$registro[1]"; ?>
 								</p>
 							</td>
 							<td>
 								<p>
-									<?php echo "$registro[4]"; ?>
+									<?php echo "$registro[2]"; ?>
 								</p>
 							</td>
 							<td>
 								<p>
 									<?php
-									$d = strtotime($registro[2]);
+									$d = strtotime($registro[3]);
 									echo date("d/m/Y H:i:s", $d);
 									?>
 								</p>
 							</td>
 							<td>
 								<p>
-									<a class="editar" href="altera_venda.php?id_fun=<?php echo $registro[0] ?>&id_cel=<?php echo $registro[1] ?>" title="Editar Venda">
+									<a class="editar" href="altera_venda.php?id_ven=<?php echo $registro[0] ?>" title="Editar Venda">
 										<i class="fas fa-user-edit" style="color: white;"></i>
 									</a>
 									<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Venda">

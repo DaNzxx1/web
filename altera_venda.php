@@ -41,14 +41,11 @@ session_start();
 			<div id="funcionalidade" class="div_direita">
 				<?php
 				$conectar = mysqli_connect("localhost", "root", "", "themax");
-				$id_fun = $_GET['id_fun'];
-				$id_cel = $_GET['id_cel'];
+				$id_ven = $_GET['id_ven'];
 
 				$sql_consulta = "SELECT
 									VENDAS.ID_FUN,
 									VENDAS.ID_CEL,
-									FUNCIONARIOS.NOME_FUN,
-									CONCAT(CELULAR.MARCA_CEL, ' ', CELULAR.NOME_CEL),
 									CONVERT(DATAHORA_VEN, DATE),
 									CONVERT(DATAHORA_VEN, TIME)
 								FROM
@@ -57,8 +54,7 @@ session_start();
 									ON FUNCIONARIOS.ID_FUN = VENDAS.ID_FUN
 								JOIN CELULAR
 									ON CELULAR.ID_CEL = VENDAS.ID_CEL
-								WHERE VENDAS.ID_FUN = '$id_fun'
-								AND VENDAS.ID_CEL = '$id_cel'";
+								WHERE ID_VEN = '$id_ven'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				$registro = mysqli_fetch_row($resultado_consulta);
 
@@ -83,16 +79,19 @@ session_start();
 				$registro_cel = mysqli_fetch_all($resultado_cel);
 				?>
 				<form method="post" action="processa_altera_venda.php">
-					<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
+					<input type="hidden" name="id_ven" value="<?php echo "$id_ven"; ?>">
 					<fieldset class="grupo">
 						<legend>Dados da Venda</legend>
 
 						<div class="campo">
-						<label>Funcionário</label>
+							<label>Funcionário</label>
 							<select name="id_fun" id="funcionario">
 								<?php
 								foreach ($registro_fun as $funcionario) {
-									echo "<option value='" . $funcionario[0] . "'>" . $funcionario[1] . "</option>";
+									if ($registro[0] == $funcionario[0])
+										echo "<option selected value='" . $funcionario[0] . "'>" . $funcionario[1] . "</option>";
+									else
+										echo "<option value='" . $funcionario[0] . "'>" . $funcionario[1] . "</option>";
 								}
 								?>
 							</select>
@@ -109,11 +108,11 @@ session_start();
 						</div>
 						<div class="campo">
 							<label>Data</label>
-							<input type="date" name="data" id="data" value="<?php echo $registro[4] ?>">
+							<input type="date" name="data" id="data" value="<?php echo $registro[2] ?>">
 						</div>
 						<div class="campo">
 							<label>Hora</label>
-							<input type="time" name="hora" id="hora" value="<?php echo $registro[5] ?>">
+							<input type="time" name="hora" id="hora" value="<?php echo $registro[3] ?>">
 						</div>
 					</fieldset>
 
