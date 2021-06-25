@@ -115,7 +115,7 @@ session_start();
 								<a href="#fechar" title="Fechar" class="fechar">x</a>
 								<h2>Excluir Venda</h2>
 								<p>Você realmente deseja excluir este Venda?</p>
-								<a class="botaosim" href="processa_excluir_fun.php?codigo=<?php echo $registro[0] ?>">Sim</a>
+								<a class="botaosim" href="processa_excluir_ven.php?id_ven=<?php echo $registro[0] ?>">Sim</a>
 								<a class="botaonao" href="#fechar">Não</a>
 							</div>
 						</div>
