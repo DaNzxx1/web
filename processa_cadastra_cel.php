@@ -14,9 +14,17 @@
     $sistema = $_POST["sistema"];
     $bateria = $_POST["bateria"];
 	$preco = $_POST ["preco"];
+	$foto = $_FILES ["foto"];
+
+	$foto_nome = "img/".$foto["name"];
+	echo "<script> alert ('$foto_nome); </script>";
+	exit();
+	move_uploaded_file($foto["tmp_name"], $foto_nome);
+
+	
 
 	$sql_consulta = "SELECT numero_serie_cel FROM celular
-                    WHERE numero_serie_cel = '$login'";
+                    	WHERE numero_serie_cel = '$numero_serie'";
 
 	$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
@@ -25,7 +33,7 @@
 	if ($linhas == 1) {
 
     echo "<script> alert ('Celular já cadastrado. Tente outro!'); </script>";
-    echo "<script> location.href = ('cadastra_fun.php'); </script>";
+    echo "<script> location.href = ('cadastra_cel.php'); </script>";
 	} else {	
 		$sql_cadastrar = "INSERT INTO celular (numero_serie_cel, 
 												marca_cel, 
@@ -37,7 +45,8 @@
 												camera_traseira_cel,
 												so_cel,
 												bateria_cel, 
-												preco_cel) 
+												preco_cel,
+												foto_cel) 
 						VALUES 			   ('$numero_serie',
 												'$marca', 
 												'$nome',
@@ -48,7 +57,8 @@
 												'$camera_traseira',
 												'$sistema',
 												'$bateria',
-												'$preco')";
+												'$preco',
+												'$foto')";
 												
 		$sql_resultado_cadastrar = mysqli_query ($conectar, $sql_cadastrar);
 		
@@ -57,7 +67,7 @@
 					alert ('$marca $nome cadastrado com sucesso') 
 				</script>";
 			echo "<script>
-					location.href = ('cadastra_cel.php') 
+					location.href = ('lista_cel.php') 
 				</script>";		
 		}
 		else { 	

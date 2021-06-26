@@ -43,46 +43,53 @@
 							</div>
 							<div class="campo">
 								<label>Marca</label>
-								<input type="text" name="marca" id="marca">
+								<input type="text" name="marca" id="marca" required>
 							</div>
 							<div class="campo">
 								<label>Nome(modelo)</label>
-								<input type="text" name="nome" id="nome">
+								<input type="text" name="nome" id="nome" required>
 							</div>
 							<div class="campo">
 								<label>Processador</label>
-								<input type="text" name="processador" id="processador">
+								<input type="text" name="processador" id="processador" required>
 							</div>
 							<div class="campo">
 								<label>Memória(RAM)</label>
-								<input type="text" name="memoria" id="memoria">
+								<input type="text" name="memoria" id="memoria" required>
 							</div>
 							<div class="campo">
 								<label>Armazenamento</label>
-								<input type="text" name="armazenamento" id="armazenamento">
+								<input type="text" name="armazenamento" id="armazenamento" required>
 							</div>
 							<div class="campo">
 								<label>Câmera Frontal</label>
-								<input type="text" name="camera_frontal" id="camera_frontal">
+								<input type="text" name="camera_frontal" id="camera_frontal" required>
 							</div>
 							<div class="campo">
 								<label>Câmera Traseira</label>
-								<input type="text" name="camera_traseira" id="camera_traseira">
+								<input type="text" name="camera_traseira" id="camera_traseira" required>
 							</div>
 							<div class="campo">
 								<label>Sistema Operacional</label>
-								<input type="text" name="sistema" id="sistema">
+								<input type="text" name="sistema" id="sistema" required>
 							</div>
 							<div class="campo">
 								<label>Bateria</label>
-								<input type="text" name="bateria" id="bateria">
+								<input type="text" name="bateria" id="bateria" required>
 							</div>
 							<div class="campo">
 								<label>Preço</label>
-								<input type="text" name="preco" id="preco">
+								<input type="text" name="preco" id="preco" required>
+							</div>
+							<div class="campo">
+								<label>Foto:<br/></label>
+							</div>
+							<div class="campo">
+								<p> <input type="file" name="foto" id="foto" required> </p>	
 							</div>
 						</fieldset>
-						
+							
+
 						<p> <input type="submit" class="botao" value="Cadastrar Celular">  </p> <br/>
 					</form>
 					<p> <input type="submit" onclick="history.back();" class="botao" value="Voltar">   </p>
