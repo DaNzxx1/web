@@ -13,10 +13,10 @@
     $camera_traseira = $_POST["camera_traseira"];
     $sistema = $_POST["sistema"];
     $bateria = $_POST["bateria"];
-	$preco = $_POST ["preco"];
-	$foto = $_FILES ["foto"];
+	$preco = $_POST["preco"];
+	$foto = $_POST["foto"];
 
-	$foto_nome = "img/".$foto["name"];
+	$foto_nome = "img/".$foto;
 	echo "<script> alert ('$foto_nome); </script>";
 	exit();
 	move_uploaded_file($foto["tmp_name"], $foto_nome);
