@@ -44,12 +44,20 @@ session_start();
 				$cod = $_GET['codigo'];
 
 				$sql_consulta = "SELECT marca_cel, nome_cel, numero_serie_cel, processador_cel, memoria_cel, armazenamento_cel,
-                camera_frontal_cel, camera_traseira_cel, so_cel, bateria_cel, preco_cel FROM celular
+                camera_frontal_cel, camera_traseira_cel, so_cel, bateria_cel, preco_cel, foto_cel FROM celular
 												WHERE id_cel = '$cod'";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
 				$registro = mysqli_fetch_row($resultado_consulta);
 				?>
+
+				<table align="right">
+					<tr>
+							<td colspan="2">
+								<img src="<?php echo "$registro[11]"; ?>">
+							</td>							
+					<tr>
+				</table>
 
 				<table class="name">
                     <tr>
