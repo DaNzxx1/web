@@ -35,15 +35,13 @@ session_start();
 				<?php include "menu_local.php"; ?>
 			</div>
 			<div class="conteudo_especifico centralizar">
-				<div class="centralizar">
-					<h1> CELULARES </h1>
-				</div>
+				<h1> CELULARES </h1>
 				<div>
 					<a class="div_esquerda botao" href="cadastra_cel.php" title="Cadastrar celular">
 						Cadastrar celular <i class="fas fa-user-plus"></i>
 					</a>
 				</div>
-				<div id="funcionalidade" class="div_direita">
+				<div id="funcionalidade">
 					<?php
 					$conectar = mysqli_connect("localhost", "root", "", "themax");
 

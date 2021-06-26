@@ -252,6 +252,7 @@ session_start();
 					}
 					?>
 				</form>
+				<p> <button type="submit" onclick="history.back();" class="botao botaoEsquerda">Voltar</button> </p>
 			</div>
 		</div>
 		<div class="rodape">

@@ -30,6 +30,9 @@ session_start();
 				</ul>
 			</div>
 		</div>
+        <div class="menu_local">
+				<?php include "menu_local.php"; ?>
+			</div>
 		<div class="conteudo_especifico">
 			<div class="centralizar">
 				<h1> ALTERAÇÃO DE CELULARES </h1>
@@ -49,6 +52,7 @@ session_start();
 				?>
 				<form method="post" action="processa_altera_cel.php">
 					<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
+                    <fieldset class="grupo">
 						<legend>Dados do Celular</legend>
 
                         <div class="campo">
@@ -95,12 +99,12 @@ session_start();
                             <label>Preço</label>
                             <input type="text" name="preco" id="preco" value="<?php echo $registro[10] ?>">
                         </div>
-                        </fieldset>
+                    </fieldset>
 
-                        <p> <input type="submit" class="botao" value="Alterar Funcionário">  </p> <br/>
+                        <p> <input type="submit" class="botao" value="Alterar Funcionário">  </p>
 
 				</form>
-                <p> <input type="submit" onclick="history.back();" class="botao" value="Voltar">   </p>
+                <p> <input type="submit" onclick="history.back();" class="botao botaoEsquerda" value="Voltar"> </p>
 			</div>
 		</div>
 		<div class="rodape">

@@ -28,6 +28,9 @@
                     </ul>                
 				</div>
 			</div>
+			<div class="menu_local">
+				<?php include "menu_local.php"; ?>
+			</div>
 			<div class="conteudo_especifico">
 				<div class="centralizar">
 					<h1> CADASTRO DE CELULARES </h1>
@@ -90,9 +93,9 @@
 						</fieldset>
 							
 
-						<p> <input type="submit" class="botao" value="Cadastrar Celular">  </p> <br/>
+						<p> <input type="submit" class="botao" value="Cadastrar Celular">  </p>
 					</form>
-					<p> <input type="submit" onclick="history.back();" class="botao" value="Voltar">   </p>
+					<p> <input type="submit" onclick="history.back();" class="botao botaoEsquerda" value="Voltar">   </p>
 				</div>				
 			</div>	
 			<div class="rodape">

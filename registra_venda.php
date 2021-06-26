@@ -84,8 +84,8 @@ session_start();
 					</fieldset>
 
 					<p> <input type="submit" class="botao" value="Cadastrar Venda"> </p>
-					<p> <button type="submit" onclick="history.back();" class="botao">Voltar</button> </p>
 				</form>
+				<p> <button type="submit" onclick="history.back();" class="botao botaoEsquerda">Voltar</button> </p>
 			</div>
 		</div>
 		<div class="rodape">
