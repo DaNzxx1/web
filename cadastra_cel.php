@@ -17,7 +17,7 @@
     <body>
         <div class="principal">
 			<div class="topo topo_grid">
-				<div id="logo">
+				<div class="logo">
 					<h1> THE MAX Celulares </h1>
 					<h4> Controle de estoque e venda </h4>
 				</div>
