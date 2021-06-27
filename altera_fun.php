@@ -147,7 +147,7 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Data de Demissão</label>
-								<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>" required>
+								<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>">
 							</div>
 							<div class="campo">
 								<label>Carteira de Trabalho</label>
