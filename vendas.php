@@ -104,9 +104,13 @@ session_start();
 									<a class="editar" href="altera_venda.php?id_ven=<?php echo $registro[0] ?>" title="Editar Venda">
 										<i class="fas fa-user-edit" style="color: white;"></i>
 									</a>
-									<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Venda">
-										<i class="fas fa-user-times" style="color: white;"></i>
-									</a>
+									<?php if ($_SESSION["funcao_fun"] == 'administrador') {
+									?>
+										<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir Venda">
+											<i class="fas fa-user-times" style="color: white;"></i>
+										</a>
+									<?php } 
+									?>
 								</p>
 							</td>
 						</tr>

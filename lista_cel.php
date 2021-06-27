@@ -37,7 +37,7 @@ session_start();
 			<div class="conteudo_especifico centralizar">
 				<h1> CELULARES </h1>
 				<div>
-					<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+					<?php if ($_SESSION["funcao_fun"] != 'vendedor') {
 					?>
 
 						<a class="div_esquerda botao" href="cadastra_cel.php" title="Cadastrar celular">
@@ -70,7 +70,7 @@ session_start();
 							<td style="border-bottom: 1px solid black!important;">
 								<p> Preço </p>
 							</td>
-							<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+							<?php if ($_SESSION["funcao_fun"] != 'vendedor') {
 							?>
 								<td style="border-bottom: 1px solid black!important;">
 									<p> Ação </p>
@@ -110,16 +110,20 @@ session_start();
 										<?php echo "$registro[5]"; ?>
 									</p>
 								</td>
-								<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+								<?php if ($_SESSION["funcao_fun"] != 'vendedor') {
 								?>
 									<td class="direita">
 										<p>
 											<a class="editar" href="altera_cel.php?codigo=<?php echo $registro[0] ?>" title="Editar celular">
 												<i class="fas fa-user-edit" style="color: white;"></i>
 											</a>
-											<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir celular">
-												<i class="fas fa-user-times" style="color: white;"></i>
-											</a>
+											<?php if ($_SESSION["funcao_fun"] == 'administrador') {
+											?>
+												<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir celular">
+													<i class="fas fa-user-times" style="color: white;"></i>
+												</a>
+											<?php } 
+											?>
 										</p>
 									</td>
 								<?php } 
