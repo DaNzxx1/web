@@ -78,7 +78,7 @@ session_start();
 				$resultado_cel = mysqli_query($conectar, $sql_cel);
 				$registro_cel = mysqli_fetch_all($resultado_cel);
 				?>
-				<form method="post" action="processa_altera_venda.php">
+				<form method="post" action="processa_altera_ven.php">
 					<input type="hidden" name="id_ven" value="<?php echo "$id_ven"; ?>">
 					<fieldset class="grupo">
 						<legend>Dados da Venda</legend>

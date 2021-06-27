@@ -51,7 +51,7 @@ session_start();
 				$registro_cel = mysqli_fetch_all($resultado_consulta_cel);
 
 				?>
-				<form method="post" class="form" action="processa_registra_venda.php">
+				<form method="post" class="form" action="processa_registra_ven.php">
 					<fieldset class="grupo">
 						<legend>Venda</legend>
 
