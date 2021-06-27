@@ -19,7 +19,7 @@ $resultado_venda = mysqli_query($conectar, $sql_venda);
 if ($resultado_cadastrar == true && $resultado_venda == true) {
 
     echo "<script> alert ('Venda registrada com sucesso'); </script>";
-    echo "<script> location.href = ('registra_venda.php'); </script>";
+    echo "<script> location.href = ('vendas.php'); </script>";
     
 } else {
 

@@ -47,7 +47,7 @@ if ($linhas == 1) {
     if ($resultado_cadastrar == true) {
 
         echo "<script> alert ('$nome cadastrado com sucesso'); </script>";
-        echo "<script> location.href = ('cadastra_fun.php'); </script>";
+        echo "<script> location.href = ('lista_fun.php'); </script>";
         
     } else {
 

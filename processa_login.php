@@ -35,7 +35,7 @@
         $_SESSION["funcao_fun"] = $registro[4];
         echo "<script> location.href = ('administracao.php') </script>";
     } else {
-        echo "<script> alert ('Login ou Senha Incorretos! Digite Novamento') </script>";
+        echo "<script> alert ('Login ou Senha Incorretos! Digite Novamente') </script>";
         echo "<script> location.href = ('index.php') </script>";
     }
 ?>

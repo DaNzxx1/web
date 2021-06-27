@@ -6,13 +6,15 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cadastrar Funcionário</title>
+        <title>THE MAX | Cadastrar Funcionário</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/grid.css">
         <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     </head>
     <body>
         <div class="principal">
@@ -24,7 +26,7 @@
 				<div class="menu_global">
 					<ul>
 						<li> Olá <?php include "valida_login.php"; ?> </li>
-						<li><a href="logout.php" class="active">Sair</a></li>
+						<li><a href="logout.php" class="active">Sair&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -126,7 +128,7 @@
 						
 						<p> <input type="submit" class="botao" value="Cadastrar Funcionário">  </p>
 					</form>
-					<p> <button type="submit" onclick="history.back();" class="botao botaoEsquerda">Voltar</button> </p>
+					<p> <a href="lista_fun.php" class="botao botaoEsquerda"> Voltar </a> </p>
 				</div>				
 			</div>	
 			<div class="rodape">

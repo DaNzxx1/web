@@ -7,13 +7,15 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Alterar Funcionário</title>
+	<title>THE MAX | Alterar Funcionário</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@ session_start();
 			<div class="menu_global">
 				<ul>
 					<li> Olá <?php include "valida_login.php"; ?> </li>
-					<li><a href="logout.php" class="active">Sair</a></li>
+					<li><a href="logout.php" class="active">Sair&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -61,23 +63,23 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Telefone</label>
-								<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>">
+								<input type="text" name="telefone" id="telefone" value="<?php echo $registro[6] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Data de Nascimento</label>
-								<input type="date" name="data_nascimento" id="data_nascimento" value="<?php echo $registro[5] ?>">
+								<input type="date" name="data_nascimento" id="data_nascimento" value="<?php echo $registro[5] ?>" required>
 							</div>
 							<div class="campo">
 								<label>E-mail</label>
-								<input type="email" name="email" id="email" value="<?php echo $registro[4] ?>">
+								<input type="email" name="email" id="email" value="<?php echo $registro[4] ?>" required>
 							</div>
 							<div class="campo">
 								<label>CPF</label>
-								<input type="text" name="cpf" id="cpf" value="<?php echo $registro[2] ?>">
+								<input type="text" name="cpf" id="cpf" value="<?php echo $registro[2] ?>" required>
 							</div>
 							<div class="campo">
 								<label>RG</label>
-								<input type="text" name="rg" id="rg" value="<?php echo $registro[3] ?>">
+								<input type="text" name="rg" id="rg" value="<?php echo $registro[3] ?>" required>
 							</div>
 						</fieldset>
 
@@ -86,7 +88,7 @@ session_start();
 
 							<div class="campo">
 								<label>CEP</label>
-								<input type="text" name="cep" id="cep" value="<?php echo $registro[15] ?>">
+								<input type="text" name="cep" id="cep" value="<?php echo $registro[15] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Endereço</label>
@@ -98,11 +100,11 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Bairro</label>
-								<input type="text" name="bairro" id="bairro" value="<?php echo $registro[16] ?>">
+								<input type="text" name="bairro" id="bairro" value="<?php echo $registro[16] ?>" required>
 							</div>
 							<div class="campo">
 								<label>UF</label>
-								<input type="text" name="uf" id="uf" value="<?php echo $registro[14] ?>">
+								<input type="text" name="uf" id="uf" value="<?php echo $registro[14] ?>" required>
 							</div>
 						</fieldset>
 
@@ -111,11 +113,11 @@ session_start();
 
 							<div class="campo">
 								<label>Login</label>
-								<input type="text" name="login" id="login" value="<?php echo $registro[7] ?>">
+								<input type="text" name="login" id="login" value="<?php echo $registro[7] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Senha</label>
-								<input type="password" name="senha" id="senha" value="<?php echo $registro[8] ?>">
+								<input type="password" name="senha" id="senha" value="<?php echo $registro[8] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Função</label>
@@ -141,15 +143,15 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Data de Admissão</label>
-								<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[12] ?>">
+								<input type="date" name="data_admissao" id="data_admissao" value="<?php echo $registro[12] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Data de Demissão</label>
-								<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>">
+								<input type="date" name="data_demissao" id="data_demissao" value="<?php echo $registro[13] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Carteira de Trabalho</label>
-								<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[11] ?>">
+								<input type="text" name="carteira_trabalho" id="carteira_trabalho" value="<?php echo $registro[11] ?>" required>
 							</div>
 						</fieldset>
 
@@ -221,7 +223,7 @@ session_start();
 							</div>
 							<div class="campo">
 								<label>Senha</label>
-								<input type="password" name="senha" id="senha" value="<?php echo $registro[8] ?>">
+								<input type="password" name="senha" id="senha" value="<?php echo $registro[8] ?>" required>
 							</div>
 							<div class="campo">
 								<label>Função</label>
@@ -252,7 +254,7 @@ session_start();
 					}
 					?>
 				</form>
-				<p> <button type="submit" onclick="history.back();" class="botao botaoEsquerda">Voltar</button> </p>
+				<p> <a href="lista_fun.php" class="botao botaoEsquerda"> Voltar </a> </p>
 			</div>
 		</div>
 		<div class="rodape">

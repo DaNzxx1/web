@@ -6,7 +6,7 @@ session_start();
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Celular</title>
+		<title>THE MAX | Celular</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/layout.css">
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -27,7 +27,7 @@ session_start();
 				<div class="menu_global">
 					<ul>
 						<li> Olá <?php include "valida_login.php"; ?> </li>
-						<li><a href="logout.php" class="active">Sair</a></li>
+						<li><a href="logout.php" class="active">Sair&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
 					</ul>
 				</div>
 			</div>
