@@ -37,9 +37,14 @@ session_start();
 			<div class="conteudo_especifico centralizar">
 				<h1> CELULARES </h1>
 				<div>
-					<a class="div_esquerda botao" href="cadastra_cel.php" title="Cadastrar celular">
-						Cadastrar celular <i class="fas fa-user-plus"></i>
-					</a>
+					<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+					?>
+
+						<a class="div_esquerda botao" href="cadastra_cel.php" title="Cadastrar celular">
+							Cadastrar celular <i class="fas fa-user-plus"></i>
+						</a>
+					<?php } 
+					?>
 				</div>
 				<div id="funcionalidade">
 					<?php
@@ -65,9 +70,13 @@ session_start();
 							<td style="border-bottom: 1px solid black!important;">
 								<p> Preço </p>
 							</td>
-							<td style="border-bottom: 1px solid black!important;">
-								<p> Ação </p>
-							</td>
+							<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+							?>
+								<td style="border-bottom: 1px solid black!important;">
+									<p> Ação </p>
+								</td>
+							<?php } 
+							?>
 						</tr>
 						<?php
 						while ($registro = mysqli_fetch_row($resultado_consulta)) {
@@ -101,16 +110,20 @@ session_start();
 										<?php echo "$registro[5]"; ?>
 									</p>
 								</td>
-								<td class="direita">
-									<p>
-										<a class="editar" href="altera_cel.php?codigo=<?php echo $registro[0] ?>" title="Editar celular">
-											<i class="fas fa-user-edit" style="color: white;"></i>
-										</a>
-										<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir celular">
-											<i class="fas fa-user-times" style="color: white;"></i>
-										</a>
-									</p>
-								</td>
+								<?php if ($_SESSION["funcao_fun"] != 'estoquista') {
+								?>
+									<td class="direita">
+										<p>
+											<a class="editar" href="altera_cel.php?codigo=<?php echo $registro[0] ?>" title="Editar celular">
+												<i class="fas fa-user-edit" style="color: white;"></i>
+											</a>
+											<a class="excluir" href="#abrirModal<?php echo $registro[0] ?>" data-confirm="Certeza?" title="Excluir celular">
+												<i class="fas fa-user-times" style="color: white;"></i>
+											</a>
+										</p>
+									</td>
+								<?php } 
+								?>
 							</tr>
 							<div id="abrirModal<?php echo $registro[0] ?>" class="modal">
 								<div>
