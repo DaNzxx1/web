@@ -46,12 +46,13 @@ session_start();
 				$cod = $_GET['codigo'];
 
 				$sql_consulta = "SELECT marca_cel, nome_cel, numero_serie_cel, processador_cel, memoria_cel, armazenamento_cel,
-                camera_frontal_cel, camera_traseira_cel, so_cel, bateria_cel, preco_cel FROM celular 
+                camera_frontal_cel, camera_traseira_cel, so_cel, bateria_cel, preco_cel, data_alteracao_cel FROM celular 
                                      WHERE id_cel = '$cod'";
 
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				$registro = mysqli_fetch_row($resultado_consulta);
 				?>
+                <p><strong> <i class="fas fa-clock"></i>&nbsp;Última Alteração: <?php $data = strtotime($registro[11]); echo date("d/m/Y H:i:s", $data); ?> </strong></p>
 				<form method="post" action="processa_altera_cel.php">
 					<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
                     <fieldset class="grupo">

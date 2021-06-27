@@ -22,6 +22,7 @@ CREATE TABLE FUNCIONARIOS
     BAIRRO_FUN               VARCHAR(45) NOT NULL,
     ENDERECO_FUN             VARCHAR(45) NOT NULL,
     END_NUMERO_FUN           VARCHAR(4)  NOT NULL,
+    DATA_ALTERACAO_FUN timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY (ID_FUN)
 );
 
@@ -31,6 +32,7 @@ CREATE TABLE VENDAS
     ID_FUN       INT      NOT NULL,
     ID_CEL       INT      NOT NULL,
     DATAHORA_VEN DATETIME NOT NULL,
+    DATA_ALTERACAO_VEN timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY (ID_VEN, ID_FUN, ID_CEL)
 );
 
@@ -50,6 +52,7 @@ CREATE TABLE CELULAR
     PRECO_CEL           VARCHAR(15) NOT NULL,
     FILA_COMPRA_CEL     CHAR(1)     NOT NULL,
     FOTO_CEL            VARCHAR(15) NOT NULL,
+    DATA_ALTERACAO_CEL timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
     PRIMARY KEY (ID_CEL)
 );
 

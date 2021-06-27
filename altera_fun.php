@@ -49,6 +49,7 @@ session_start();
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				$registro = mysqli_fetch_row($resultado_consulta);
 				?>
+				<p><strong> <i class="fas fa-clock"></i>&nbsp;Última Alteração: <?php $data = strtotime($registro[19]); echo date("d/m/Y H:i:s", $data); ?> </strong></p>
 				<form method="post" action="processa_altera_fun.php">
 					<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
 					<?php

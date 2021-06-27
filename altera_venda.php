@@ -49,7 +49,8 @@ session_start();
 									VENDAS.ID_FUN,
 									VENDAS.ID_CEL,
 									CONVERT(DATAHORA_VEN, DATE),
-									CONVERT(DATAHORA_VEN, TIME)
+									CONVERT(DATAHORA_VEN, TIME),
+									DATA_ALTERACAO_CEL
 								FROM
 									VENDAS
 								JOIN FUNCIONARIOS
@@ -80,6 +81,7 @@ session_start();
 				$resultado_cel = mysqli_query($conectar, $sql_cel);
 				$registro_cel = mysqli_fetch_all($resultado_cel);
 				?>
+				<p><strong> <i class="fas fa-clock"></i>&nbsp;Última Alteração: <?php $data = strtotime($registro[4]); echo date("d/m/Y H:i:s", $data); ?> </strong></p>
 				<form method="post" action="processa_altera_ven.php">
 					<input type="hidden" name="id_ven" value="<?php echo "$id_ven"; ?>">
 					<fieldset class="grupo">
