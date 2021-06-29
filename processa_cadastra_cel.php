@@ -17,10 +17,7 @@
 	$foto = $_POST["foto"];
 
 	$foto_nome = "img/".$foto;
-	move_uploaded_file($foto["tmp_name"], $foto_nome);
-
 	
-
 	$sql_consulta = "SELECT numero_serie_cel FROM celular
                     	WHERE numero_serie_cel = '$numero_serie'";
 
@@ -56,7 +53,7 @@
 												'$sistema',
 												'$bateria',
 												'$preco',
-												'$foto')";
+												'$foto_nome')";
 												
 		$sql_resultado_cadastrar = mysqli_query ($conectar, $sql_cadastrar);
 		

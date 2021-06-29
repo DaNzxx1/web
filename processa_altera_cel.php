@@ -15,13 +15,24 @@ $camera_traseira = $_POST["camera_traseira"];
 $sistema = $_POST["sistema"];
 $bateria = $_POST["bateria"];
 $preco = $_POST ["preco"];
+$foto = $_POST["foto"];
 
-$sql_update = "UPDATE celular SET nome_cel = '$nome', marca_cel = '$marca', numero_serie_cel = '$numero_serie', processador_cel = '$processador', memoria_cel = '$memoria', armazenamento_cel = '$armazenamento',
-    camera_frontal_cel = '$camera_frontal', camera_traseira_cel = '$camera_traseira', so_cel = '$sistema', bateria_cel = '$bateria', preco_cel = '$preco'
+$foto_nome = "img/".$foto;
+
+if($foto == null){
+    $sql_update = "UPDATE celular SET nome_cel = '$nome', marca_cel = '$marca', numero_serie_cel = '$numero_serie', processador_cel = '$processador', memoria_cel = '$memoria', armazenamento_cel = '$armazenamento',
+        camera_frontal_cel = '$camera_frontal', camera_traseira_cel = '$camera_traseira', so_cel = '$sistema', bateria_cel = '$bateria', preco_cel = '$preco'
+            WHERE id_cel = '$cod'";
+
+    $resultado_update = mysqli_query($conectar, $sql_update);
+} else {
+    $sql_update = "UPDATE celular SET nome_cel = '$nome', marca_cel = '$marca', numero_serie_cel = '$numero_serie', processador_cel = '$processador', memoria_cel = '$memoria', armazenamento_cel = '$armazenamento',
+    camera_frontal_cel = '$camera_frontal', camera_traseira_cel = '$camera_traseira', so_cel = '$sistema', bateria_cel = '$bateria', preco_cel = '$preco', foto_cel = '$foto_nome'
         WHERE id_cel = '$cod'";
 
-$resultado_update = mysqli_query($conectar, $sql_update);
-        
+    $resultado_update = mysqli_query($conectar, $sql_update);  
+}
+
 if ($sql_update == true) {
 
     echo "<script> alert ('$marca $nome alterado com sucesso') </script>";
