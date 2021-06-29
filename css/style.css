@@ -161,14 +161,14 @@ a {
 
 /* Lista Func */
 
-.listaFun {
+.listaPadrao {
     font-size: 17px;
     padding: 5px;
     text-shadow: 0px 0px 1px black;
     width: 100%;
 }
 
-.listaFun td {
+.listaPadrao td {
     /* border-bottom: 1px solid black; */
     padding: 0px 11px ;
 }

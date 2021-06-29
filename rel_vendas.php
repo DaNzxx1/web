@@ -7,7 +7,7 @@ session_start();
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>THE MAX | Relatório Vendas</title>
+	<title>THE MAX | Relatório Valor Total de Vendas</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/layout.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
@@ -54,7 +54,7 @@ session_start();
 				while ($registro_total_vendas = mysqli_fetch_row($resultado_consulta))
 				 {
 
-					$$valor_total = $valor_total + intval($registro_total_vendas[0]);
+					$valor_total = $valor_total + $registro_total_vendas[0];
 				}
 				?>
 				<p> Total de vendas até a data de hoje: <?php echo $valor_total; ?> </p>

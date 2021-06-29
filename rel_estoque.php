@@ -43,28 +43,29 @@
 
 							
 					
-						$sql_consulta = "SELECT ID_CEL, MARCA_CEL, NOME_CEL, NUMERO_SERIE_CEL, PRECO_CEL FROM celular  WHERE FILA_COMPRA_CEL = 'N'";
+						$sql_consulta = "SELECT id_cel, marca_cel, nome_cel, memoria_cel, processador_cel, preco_cel FROM celular WHERE FILA_COMPRA_CEL = 'N'";
 						$resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 						
 							
 					?>
 					
-					<table class="centralizar listaFun">
+					<table class="centralizar listaPadrao">
 						<tr>
 							<td class="esquerda" style="border-bottom: 1px solid black!important;">
 								<p> Marca </p>
 							</td>
 							<td style="border-bottom: 1px solid black!important;">
-								<p> Modelo </p>
+								<p> Nome </p>
 							</td>
 							<td style="border-bottom: 1px solid black!important;">
-								<p> Tipo </p>
+								<p> Memoria </p>
+							</td>
+							<td style="border-bottom: 1px solid black!important;">
+								<p> Processador </p>
 							</td>
 							<td style="border-bottom: 1px solid black!important;">
 								<p> Preço </p>
 							</td>
-								
-							
 						</tr>
 						<?php		
 							while ($registro = mysqli_fetch_row($resultado_consulta))
@@ -73,29 +74,32 @@
 						<tr>
 							<td class="esquerda">
 								<p>
-									<?php echo $registro[1]; ?>
+									<a class="exibe" href="exibe_cel.php?codigo=<?php echo $registro[0] ?>" title="Exibir celular">
+										<i class="fas fa-stream" style="color: white;"></i>
+									</a>&nbsp;
+									<?php echo "$registro[1]"; ?>
 								</p>
 							</td>
 							<td>
 								<p>
-									<?php 
-										echo "$registro[2]";
-									?>										
+									<?php echo "$registro[2]"; ?>
 								</p>
 							</td>
-							<td class="esquerda">
+							<td>
 								<p>
-									<?php echo $registro[3]; ?>
+									<?php echo "$registro[3]"; ?>
 								</p>
 							</td>
-							<td class="esquerda">
+							<td>
 								<p>
-									<?php echo $registro[4]; ?>
+									<?php echo "$registro[4]"; ?>
 								</p>
-							</td>							
-							
-							
-							
+							</td>
+							<td>
+								<p>
+									<?php echo "$registro[5]"; ?>
+								</p>
+							</td>						
 						</tr>
 						<?php
 							}

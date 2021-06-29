@@ -48,7 +48,7 @@ session_start();
 
 				?>
 
-				<table class="centralizar listaFun">
+				<table class="centralizar listaPadrao">
 					<tr>
 						<td class="esquerda" style="border-bottom: 1px solid black!important;">
 								<p> Nome </p>

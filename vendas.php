@@ -59,7 +59,7 @@ session_start();
 									ON CELULAR.ID_CEL = VENDAS.ID_CEL";
 				$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 				?>
-				<table class="centralizar listaFun">
+				<table class="centralizar listaPadrao">
 					<tr>
 						<td style="border-bottom: 1px solid black!important;">
 							<p> Funcionario </p>

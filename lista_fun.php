@@ -48,7 +48,7 @@ session_start();
 					$sql_consulta = "SELECT id_fun, nome_fun, email_fun, telefone_fun, funcao_fun, status_fun FROM funcionarios";
 					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 					?>
-					<table class="centralizar listaFun">
+					<table class="centralizar listaPadrao">
 						<tr>
 							<td class="esquerda" style="border-bottom: 1px solid black!important;">
 								<p> Nome </p>
@@ -117,7 +117,9 @@ session_start();
 									<a href="#fechar" title="Fechar" class="fechar">x</a>
 									<h2>Excluir funcionário</h2>
 									<p>Você realmente deseja excluir este funcionário?</p>
-									<a class="botaosim" href="processa_excluir_fun.php?codigo=<?php echo $registro[0] ?>">Sim</a>
+									<?php if($registro[4] != "administrador") { ?>
+										<a class="botaosim" href="processa_excluir_fun.php?codigo=<?php echo $registro[0] ?>">Sim</a>
+									<?php } ?>
 									<a class="botaonao" href="#fechar">Não</a>
 								</div>
 							</div>

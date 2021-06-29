@@ -50,10 +50,10 @@ session_start();
 					<?php
 					$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-					$sql_consulta = "SELECT id_cel, marca_cel, nome_cel, memoria_cel, processador_cel, preco_cel FROM celular";
+					$sql_consulta = "SELECT id_cel, marca_cel, nome_cel, memoria_cel, processador_cel, preco_cel FROM celular WHERE FILA_COMPRA_CEL = 'N'";
 					$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 					?>
-					<table class="centralizar listaFun">
+					<table class="centralizar listaPadrao">
 						<tr>
 							<td class="esquerda" style="border-bottom: 1px solid black!important;">
 								<p> Marca </p>
@@ -107,7 +107,7 @@ session_start();
 								</td>
 								<td>
 									<p>
-										<?php echo "$registro[5]"; ?>
+										<?php echo "R$ $registro[5]"; ?>
 									</p>
 								</td>
 								<?php if ($_SESSION["funcao_fun"] != 'vendedor') {

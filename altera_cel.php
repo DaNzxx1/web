@@ -111,7 +111,7 @@ session_start();
         
                         </fieldset>
 
-                            <p> <input type="submit" class="botao" value="Alterar Funcionário">  </p>
+                            <p> <input type="submit" class="botao" value="Alterar Celular">  </p>
 
                     </form>
                     <p> <a href="lista_cel.php" class="botao botaoEsquerda"> Voltar </a> </p>
