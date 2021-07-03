@@ -104,7 +104,7 @@ session_start();
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong> Preço:</strong> </td>
-						<td> <?php echo $registro[10] ?> </td>
+						<td> <?php echo 'R$ ' . number_format($registro[10], 2, ',', '.'); ?> </td>
 					</tr>
 				</table>
 				<p> <button type="submit" onclick="history.back();" class="botao botaoEsquerda">Voltar</button> </p>

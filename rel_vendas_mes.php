@@ -44,7 +44,7 @@ session_start();
 
 						$data = intval(date("m"));
 						$data = $data - 1;
-						$dataP = date("Y-".$data."-d H:i:s");
+						$dataP = date("Y-".$data."-d");
 
 						$sql_consulta = "SELECT
 									ID_VEN,

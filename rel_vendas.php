@@ -57,7 +57,7 @@ session_start();
 					$valor_total = $valor_total + $registro_total_vendas[0];
 				}
 				?>
-				<p> Total de vendas até a data de hoje: <?php echo $valor_total; ?> </p>
+				<p> Total de vendas até a data de hoje: <?php echo 'R$ ' . number_format($valor_total, 2, ',', '.'); ?> </p>
 				<p> <a href="relatorios.php" class="botao botaoEsquerda"> Voltar </a> </p>
 			</div>
 		</div>

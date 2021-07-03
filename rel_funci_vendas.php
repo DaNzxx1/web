@@ -47,6 +47,9 @@ session_start();
 						<td style="border-bottom: 1px solid black!important;">
 							<p> Total de Vendas </p>
 						</td>
+						<td style="border-bottom: 1px solid black!important;">
+							<p> Total de Lucro </p>
+						</td>
 					</tr>
 
 					<?php
@@ -56,14 +59,20 @@ session_start();
 						$result = mysqli_query($conectar, $sql_consulta);
 
 						while($resultado = mysqli_fetch_row($result)) {
-						$nome = $resultado[1];
-						$id_funcionario = $resultado[0];
-						
-						$sql_consulta2 = "SELECT * FROM vendas WHERE id_fun = $id_funcionario";
-						$result2 = mysqli_query($conectar, $sql_consulta2);
-						$qtd = '0';
+							$nome = $resultado[1];
+							$id_funcionario = $resultado[0];
+							
+							$sql_consulta2 = "SELECT * FROM vendas WHERE id_fun = $id_funcionario";
+							$result2 = mysqli_query($conectar, $sql_consulta2);
+							$qtd = '0';
+							$soma = 0.0;
 							while($resultado2 = mysqli_fetch_row($result2)) {
-								
+								$id_cel = $resultado2[2];
+								$sql_consulta3 = "SELECT preco_cel FROM celular WHERE id_cel = $id_cel";
+								$result3 = mysqli_query($conectar, $sql_consulta3);
+								while ($resultado3 = mysqli_fetch_row($result3)) {
+									$soma = $soma + $resultado3[0];
+								}
 								$qtd++;
 							}
 					?>
@@ -79,6 +88,11 @@ session_start();
 							<td>
 								<p>
 									<?php echo $qtd; ?>
+								</p>
+							</td>
+							<td>
+								<p>
+									<?php echo 'R$ ' . number_format($soma, 2, ',', '.');?>
 								</p>
 							</td>
 						</tr>		

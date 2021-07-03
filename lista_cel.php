@@ -107,7 +107,7 @@ session_start();
 								</td>
 								<td>
 									<p>
-										<?php echo "R$ $registro[5]"; ?>
+										<?php echo 'R$ ' . number_format($registro[5], 2, ',', '.'); ?>
 									</p>
 								</td>
 								<?php if ($_SESSION["funcao_fun"] != 'vendedor') {

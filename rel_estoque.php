@@ -97,7 +97,7 @@
 							</td>
 							<td>
 								<p>
-									<?php echo "$registro[5]"; ?>
+									<?php echo 'R$ ' . number_format($registro[5], 2, ',', '.'); ?>
 								</p>
 							</td>						
 						</tr>
