@@ -39,9 +39,9 @@ session_start();
 				<h1> RELATÓRIOS </h1>
 				<ul>
 					<li><a href="rel_vendas.php" class="active">Vendas</a></li>
-					<li><a href="rel_funci.php" class="active">Funcionários</a></li>
+					<li><a href="rel_fun.php" class="active">Funcionários</a></li>
 					<li><a href="rel_estoque.php" class="active">Celulares em estoque</a></li>
-					<li><a href="rel_funci_vendas.php" class="active">Vendas por funcionário</a></li>
+					<li><a href="rel_fun_vendas.php" class="active">Vendas por funcionário</a></li>
 					<li><a href="rel_vendas_mes.php" class="active">Vendas nos últimos 30 dias</a></li>
 				</ul>
 			</div>

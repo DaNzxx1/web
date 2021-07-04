@@ -37,7 +37,7 @@ session_start();
 		</div>
 		<div class="conteudo_especifico">
 			<div class="centralizar">
-				<h1> ALTERAÇÃO DE USUÁRIOS </h1>
+				<h1> ALTERAÇÃO DE FUNCIONÁRIO </h1>
 			</div>
 
 			<div id="funcionalidade" class="div_direita">

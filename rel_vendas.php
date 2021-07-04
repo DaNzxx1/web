@@ -58,7 +58,7 @@ session_start();
 				}
 				?>
 				<p> Total de vendas até a data de hoje: <?php echo 'R$ ' . number_format($valor_total, 2, ',', '.'); ?> </p>
-				<p> <a href="relatorios.php" class="botao botaoEsquerda"> Voltar </a> </p>
+				<p> <a href="relatorios.php" class="botao" style="float: none;"> Voltar </a> </p>
 			</div>
 		</div>
 		<div class="rodape">

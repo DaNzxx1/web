@@ -37,7 +37,7 @@ session_start();
 		</div>
 		<div class="conteudo_especifico">
 			<div class="centralizar">
-				<h1> EXIBIÇÃO DE DADOS DE USUÁRIOS </h1>
+				<h1> EXIBIÇÃO DE DADOS DO FUNCIONÁRIO </h1>
 			</div>
 
 			<div id="funcionalidade" class="div_direita">
@@ -62,7 +62,7 @@ session_start();
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong>Data de Nascimento:</strong> </td>
-						<td> <?php echo $registro[5] ?> </td>
+						<td> <?php echo date("d/m/Y", strtotime($registro[5])) ?> </td>
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong>E-mail:</strong> </td>
@@ -110,11 +110,11 @@ session_start();
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong>Data de Admissão:</strong> </td>
-						<td> <?php echo $registro[12] ?> </td>
+						<td> <?php echo date("d/m/Y", strtotime($registro[12])) ?> </td>
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong>Data de Demissão:</strong> </td>
-						<td> <?php echo $registro[13] ?> </td>
+						<td> <?php echo ($registro[13] == "0000-00-00" || $registro[13] == "" ? "N/A" : date("d/m/Y", strtotime($registro[13]))) ?> </td>
 					</tr>
 					<tr>
 						<td class="borda-direita"> <strong>Carteira de Trabalho:</strong> </td>

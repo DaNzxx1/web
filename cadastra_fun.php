@@ -35,7 +35,7 @@
 			</div>
 			<div class="conteudo_especifico">
 				<div class="centralizar">
-					<h1> CADASTRO DE FUNCIONÁRIOS </h1>
+					<h1> CADASTRO DE FUNCIONÁRIO </h1>
 				</div>	
 				<div id="funcionalidade" class="div_direita">
 					<form method="post" class="form" action="processa_cadastra_fun.php">
