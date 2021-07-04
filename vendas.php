@@ -39,7 +39,7 @@ session_start();
 			<h1> VENDAS </h1>
 			<div>
 				<a class="botao" href="registra_venda.php" title="Cadastrar Venda">
-					Cadastrar Venda <i class="fas fa-user-plus"></i>
+					Registrar Venda <i class="fas fa-user-plus"></i>
 				</a>
 			</div>
 			<div id="funcionalidade">

@@ -67,7 +67,9 @@ session_start();
 							FROM
 								FUNCIONARIOS
 							WHERE
-								STATUS_FUN = 'ativo'";
+								STATUS_FUN = 'ativo' 
+							AND
+								FUNCAO_FUN = 'vendedor'";
 				$resultado_fun = mysqli_query($conectar, $sql_fun);
 				$registro_fun = mysqli_fetch_all($resultado_fun);
 
