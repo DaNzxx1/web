@@ -1,0 +1,104 @@
+﻿<?php
+date_default_timezone_set("America/Sao_Paulo");
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>THE MAX | Cadastrar Funcionário</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/grid.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body>
+	<div class="principal">
+		<div class="topo topo_grid">
+			<div class="logo">
+				<h1> THE MAX Celulares </h1>
+				<h4> Controle de estoque e venda </h4>
+			</div>
+			<div class="menu_global">
+				<ul>
+					<li> Olá <?php include "valida_login.php"; ?> </li>
+					<li><a href="logout.php" class="active">Sair&nbsp;<i class="fas fa-sign-out-alt"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu_local">
+			<?php include "menu_local.php"; ?>
+		</div>
+		<div class="conteudo_especifico">
+			<div class="centralizar">
+				<h1> REGISTRO DE VENDAS </h1>
+			</div>
+			<div id="funcionalidade" class="div_direita">
+				<?php
+				$conectar = mysqli_connect("localhost", "root", "", "themax");
+
+				$sql_consulta_fun = "SELECT ID_FUN, NOME_FUN FROM funcionarios WHERE STATUS_FUN = 'ativo' AND FUNCAO_FUN = 'vendedor'";
+				$resultado_consulta_fun = mysqli_query($conectar, $sql_consulta_fun);
+				$registro_fun = mysqli_fetch_all($resultado_consulta_fun);
+
+				$sql_consulta_cel = "SELECT ID_CEL, MARCA_CEL, NOME_CEL FROM celular WHERE FILA_COMPRA_CEL = 'N'";
+				$resultado_consulta_cel = mysqli_query($conectar, $sql_consulta_cel);
+				$registro_cel = mysqli_fetch_all($resultado_consulta_cel);
+
+				?>
+				<form method="post" class="form" action="processa_registra_ven.php">
+					<fieldset class="grupo">
+						<legend>Venda</legend>
+
+						<div class="campo">
+							<label>Funcionário</label>
+							<select name="id_fun" id="funcionario">
+								<?php
+								foreach ($registro_fun as $funcionario) {
+									echo "<option value='" . $funcionario[0] . "'>" . $funcionario[1] . "</option>";
+								}
+								?>
+							</select>
+						</div>
+						<div class="campo">
+							<label>Celular</label>
+							<select name="id_cel" id="celular">
+								<?php
+								foreach ($registro_cel as $celular) {
+									echo "<option value='" . $celular[0] . "'>" . $celular[1] . " " . $celular[2] . "</option>";
+								}
+								?>
+							</select>
+						</div>
+						<div class="campo">
+							<label>Data e Hora</label>
+							<?php
+							echo "<input type='date' name='data_venda' id='data_venda' value='" . date("Y-m-d") . "' readonly>"
+							?>
+						</div>
+					</fieldset>
+
+					<p> <input type="submit" class="botao" value="Cadastrar Venda"> </p>
+				</form>
+				<p> <a href="vendas.php" class="botao botaoEsquerda"> Voltar </a> </p>
+			</div>
+		</div>
+		<div class="rodape">
+			<div id="texto_institucional">
+				<div id="texto_institucional">
+					<h6> MAX - CONTROL </h6>
+					<h6> Rua do Technologia, 777 -- E-mail: contato@max_control.com.br -- Fone: (61) 99876 - 5432 </h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

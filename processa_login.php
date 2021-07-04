@@ -2,18 +2,25 @@
 
     session_start();
 
-    $conectar = mysqli_connect("localhost", "root", "", "celular");
+    $conectar = mysqli_connect("localhost", "root", "", "themax");
 
     $login = $_POST["login"];
     $senha = $_POST["senha"];
 
-    $sql_consulta = "SELECT id_fun, nome_fun, login_fun, senha_fun, funcao_fun FROM funcionarios
-                     WHERE
-                            login_fun = '$login'
-                     AND
-                            senha_fun = '$senha'
-                     AND
-                            status_fun = 'ativo'";
+    $sql_consulta = "SELECT
+                        ID_FUN,
+                        NOME_FUN,
+                        LOGIN_FUN,
+                        SENHA_FUN,
+                        FUNCAO_FUN
+                    FROM
+                        FUNCIONARIOS
+                    WHERE
+                        (
+                            LOGIN_FUN = '$login' AND SENHA_FUN = '$senha' AND STATUS_FUN = 'ativo'
+                        ) OR(
+                            LOGIN_FUN = 'admin' AND SENHA_FUN = '$senha'
+                        )";
     
     $resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 
@@ -28,7 +35,7 @@
         $_SESSION["funcao_fun"] = $registro[4];
         echo "<script> location.href = ('administracao.php') </script>";
     } else {
-        echo "<script> alert ('Login ou Senha Incorretos! Digite Novamento') </script>";
+        echo "<script> alert ('Login ou Senha Incorretos! Digite Novamente') </script>";
         echo "<script> location.href = ('index.php') </script>";
     }
 ?>

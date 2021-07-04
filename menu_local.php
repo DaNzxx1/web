@@ -20,6 +20,7 @@
 ?>
     <ul>
         <li><a href="administracao.php" class="active">Administração</a></li>
+        <li><a href="lista_cel.php">Celulares</a></li>
         <li><a href="vendas.php">Vendas</a></li>
     </ul>
 <?php

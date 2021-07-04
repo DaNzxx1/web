@@ -1,42 +1,42 @@
-#principal {
+.principal {
 	font-family: arial;
 }
 
 /* div TOPO */
-#topo {	
-	padding: 5px;
-	display: grid;
-	grid-template-columns: auto auto;
-	margin: 0px auto 20px auto;	
-	grid-gap: 5px;
+.topo {
+	margin: 0px auto 20px auto;
 	border-radius: 10px;
 	border: 2px solid black;
 	background-color: MediumBlue;
-	color: white;	
-	justify-content: space-between;
+	color: white;
+	width: 100%;
 }
 
-#logo h1 {
+.logo {
+	padding-left: 2em;
+}
+
+.logo h1 {
 	line-height: 20px;
-	word-spacing: 0px; 
 	text-shadow: 0px 0px 8px black;
 }
 
-#logo h4{
+.logo h4 {
 	line-height: 0px;
 	word-spacing: 10px;
-	text-align: center;
 	color: white;
 	text-shadow: 3px 3px 8px black;
 }
 
+.menu_global {
+	text-align: end;
+}
+
 
 /* div CONTEUDO_ESPECIFICO  */
-#conteudo_especifico {	
+.conteudo_especifico {
 	padding: 5px;
-	display: grid;
 	grid-template-columns: 50% 50%;
-	margin: 0px auto 5px auto;	
 	grid-gap: 20px;
 }
 
@@ -55,23 +55,18 @@
 }
 
 /* div RODAPE */
-#rodape {	
-	padding: 2px;
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: 50px;
+.rodape {
 	margin: 20px auto 0px auto;
-	grid-gap: 5px;
 	border-radius: 10px;
 	border: 2px solid black;
 	background-color: MediumBlue;
-	color: white;	
-	justify-content: space-between;
+	color: white;
+	width: 100%;
 }
 
-#rodape h6{
+.rodape h6 {
 	line-height: 0px;
-	word-spacing: 0px; 
+	word-spacing: 0px;
 	margin: 12px auto 12px 12px;
 }
 
