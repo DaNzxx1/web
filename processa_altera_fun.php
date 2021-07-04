@@ -62,32 +62,33 @@ if ($funcao == "administrador") {
 
     } else {
 
-        if (condition) {
-            # code...
+        if ($data_demissao != '0000-00-00') {
+            $sql_update = "UPDATE funcionarios SET nome_fun = '$nome', telefone_fun = '$telefone', data_nascimento_fun = '$data_nascimento', email_fun = '$email', cpf_fun = '$cpf' , rg_fun = '$rg',
+            cep_fun = '$cep', endereco_fun = '$endereco', END_NUMERO_FUN = '$numero', bairro_fun = '$bairro', uf_fun = '$uf',
+            login_fun = '$login', senha_fun = '$senha', funcao_fun = '$funcao', status_fun = 'inativo', date_admissao_fun = '$date_admissao', data_demissao_fun = '$data_demissao', carteira_de_trabalho_fun = '$carteira_trabalho'
+                WHERE id_fun = '$cod'";
         } else {
             $sql_update = "UPDATE funcionarios SET nome_fun = '$nome', telefone_fun = '$telefone', data_nascimento_fun = '$data_nascimento', email_fun = '$email', cpf_fun = '$cpf' , rg_fun = '$rg',
             cep_fun = '$cep', endereco_fun = '$endereco', END_NUMERO_FUN = '$numero', bairro_fun = '$bairro', uf_fun = '$uf',
             login_fun = '$login', senha_fun = '$senha', funcao_fun = '$funcao', status_fun = '$status', date_admissao_fun = '$date_admissao', data_demissao_fun = '$data_demissao', carteira_de_trabalho_fun = '$carteira_trabalho'
                 WHERE id_fun = '$cod'";
     
-            $resultado_update = mysqli_query($conectar, $sql_update);
+        }
+
+        $resultado_update = mysqli_query($conectar, $sql_update);
+
+        if ($sql_update == true) {
+
+            echo "<script> alert ('$nome alterado com sucesso') </script>";
+            echo "<script> location.href = ('lista_fun.php') </script>";
+            exit();
+
+        } else {
             
-            if ($sql_update == true) {
-    
-                echo "<script> alert ('$nome alterado com sucesso') </script>";
-                echo "<script> location.href = ('lista_fun.php') </script>";
-                exit();
-    
-            } else {
-                
-                echo "<script> alert ('Ocorreu um erro no servidor. Dados do funcionário não foram alterados. Tente de novo') </script>";
-                echo "<script> location.href = ('altera_fun.php?codigo=$cod') </script>";
-    
-            }
+            echo "<script> alert ('Ocorreu um erro no servidor. Dados do funcionário não foram alterados. Tente de novo') </script>";
+            echo "<script> location.href = ('altera_fun.php?codigo=$cod') </script>";
+
         }
         
-
-
     }
 }
-?>

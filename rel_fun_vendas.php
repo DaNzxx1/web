@@ -55,7 +55,7 @@ session_start();
 					<?php
 						$conectar = mysqli_connect("localhost", "root", "", "themax");
 
-						$sql_consulta = "SELECT id_fun, nome_fun FROM funcionarios WHERE status_fun = 'ativo'";
+						$sql_consulta = "SELECT id_fun, nome_fun FROM funcionarios WHERE status_fun = 'ativo' and funcao_fun = 'vendedor'";
 						$result = mysqli_query($conectar, $sql_consulta);
 
 						while($resultado = mysqli_fetch_row($result)) {

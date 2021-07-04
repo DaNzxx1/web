@@ -57,7 +57,7 @@ session_start();
 									ON FUNCIONARIOS.ID_FUN = VENDAS.ID_FUN
 								JOIN CELULAR
 									ON CELULAR.ID_CEL = VENDAS.ID_CEL
-								WHERE DATAHORA_VEN > '$dataP'";
+								WHERE DATAHORA_VEN >= '$dataP'";
 						$resultado_consulta = mysqli_query($conectar, $sql_consulta);
 
 					?>
